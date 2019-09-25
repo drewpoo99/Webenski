@@ -1,0 +1,43 @@
+.form-container{
+    height: 100vh;
+}
+
+#login-form{
+    padding: 30vh 50px 50px 50px;
+    text-align: center;
+    height: 100vh;
+}
+
+#login-sidebar{
+    background-color: #007BFF;
+    color: white;
+    padding: 30vh 50px 50px 50px;
+    text-align: center;
+    height: 100vh;
+}
+
+#sUpBtn{
+    width: 225px;
+    border-radius: 30px;
+    border-width: 3px;
+    font-size: 20pt;
+}
+
+#sUpBtn:hover{
+    color: #007BFF;
+}
+
+.recovery{
+    margin-bottom: 15px;
+    display: block;
+}
+
+.login{
+    padding: 10px;
+    margin: auto;
+}
+
+.form-input{
+    margin: auto;
+}
+
