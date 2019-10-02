@@ -1,8 +1,10 @@
 This is the Github repo for team Webenski for the CIS 291 final project.
 
-To push your code to the repo, create a branch in your local repo and then create a pull request. 
+Color Scheme Codes:
+Dark Grey: #393939
 
-This guide shows you how to make a branch and make a pull request: 
-https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners
+Orange: #FF5A09
 
-Don't forget to pull often to update your codebase so we're all working with the same code.
+Light Orange: #ec7f37
+
+Dark Orange: #be4f0c
