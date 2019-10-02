@@ -1,0 +1,31 @@
+/* These Styles go in every file to override Boostrap styles */
+
+.btn-primary{
+    background-color: #FF5A09;
+    color: white;
+    border-color: #FF5A09;
+}
+
+.btn-primary:hover{
+    background-color: #be4f0c;
+    border-color: #be4f0c;
+}
+
+.btn-outline-light{
+    background-color: #be4f0c;
+    border-color: #be4f0c;
+}
+
+.btn-outline-light:hover{
+    color: #FF5A09;
+    border-color: white;
+    background-color: white;
+}
+
+a{
+    color: #393939;
+}
+
+a:hover{
+    color: #444444
+}

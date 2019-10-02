@@ -11,7 +11,12 @@
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
     crossorigin="anonymous">
     
+    <!-- Bootstrap Overriding Styles -->
+    <link rel="stylesheet" href="../globalstyles.css">
+
+    <!-- Login Styles -->
     <link rel="stylesheet" href="login.css">
+    
 </head>
 <body>
     <div class="container-fluid form-container">
@@ -46,7 +51,9 @@
                     </div> 
                     <div class="form-group row">
                         <div class="col-6 form-input">
-                        <button name="submit" type="submit" class="btn btn-primary">Submit</button>
+                        <button name="submit" type="submit" 
+                        class="btn btn-primary" 
+                        onclick="location.href='../profile/profile.html'">Submit</button>
                         </div>
                     </div>
                 </form> 

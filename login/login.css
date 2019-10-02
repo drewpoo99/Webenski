@@ -6,25 +6,26 @@
     padding: 30vh 50px 50px 50px;
     text-align: center;
     height: 100vh;
+    color: #FF5A09;
 }
 
 #login-sidebar{
-    background-color: #007BFF;
+    background-color: #393939;
     color: white;
     padding: 30vh 50px 50px 50px;
     text-align: center;
     height: 100vh;
 }
 
+#login-sidebar h1{
+    color: #FF5A09
+}
+
 #sUpBtn{
-    width: 225px;
+    width: 200px;
     border-radius: 30px;
     border-width: 3px;
     font-size: 20pt;
-}
-
-#sUpBtn:hover{
-    color: #007BFF;
 }
 
 .recovery{

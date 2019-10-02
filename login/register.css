@@ -8,17 +8,22 @@
 }
 
 #signup-sidebar{
-    background-color: #007BFF;
+    background-color: #393939;
     color: white;
     padding: 30vh 50px 50px 50px;
     text-align: center;
     height: 100vh;
 }
 
+#signup-sidebar h1{
+    color: #FF5A09;
+}
+
 #signup-form{
     padding: 30vh 50px 50px 50px;
     text-align: center;
     height: 100vh;
+    color: #FF5A09;
 }
 
 #sInBtn{
@@ -26,10 +31,6 @@
     border-radius: 30px;
     border-width: 3px;
     font-size: 20pt;
-}
-
-#sInBtn:hover{
-    color: #007BFF;
 }
 
 .form-input{
