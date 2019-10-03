@@ -1,0 +1,89 @@
+/*  Color Scheme
+Dark Grey: #393939
+Orange: #FF5A09
+Light Orange: #ec7f37
+Dark Orange: #be4f0c
+Light Grey: #404040
+*/
+
+body {
+    background-color: #393939;
+}
+
+p {
+    color: #FF5A09;
+    margin: 0;
+}
+
+h1 {
+    color: #FF5A09;
+    background-color: #000;
+    text-align: center;
+    border-radius: 25px;
+    padding: 2px;
+}
+
+h2 {
+    color: #000;
+    background-color: #FF5A09;
+    width: 75%;
+    text-align: left;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    border-radius: 25px;
+    padding-left: 20px;
+}
+
+
+h5 {
+    color: #FFFFFF;
+    margin: 0;
+
+}
+
+h6 {
+    color: #be4f0c;
+}
+
+.WB {
+    display: block;
+    width: 50px;
+    height: 50px;
+    float: left;
+    margin-left: 5px;
+    margin-right: 10px;
+}
+
+.search {
+    overflow: hidden;
+}
+
+/* (Taken from w3schools.com) Style the links inside the navigation bar */
+.search a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    font-size: 18px;
+}
+
+/* Style the search box inside the navigation bar */
+.search input[type=text] {
+    float: right;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+    border-radius: 25px;
+}
+
+.sl {
+    padding-top: 10px;
+}
+
+.logo {
+    height: 100px;
+    width: 100px;
+}
