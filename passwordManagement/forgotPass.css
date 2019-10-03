@@ -1,0 +1,54 @@
+/*Hex Colors
+    Dark Grey: #393939
+    Orange: #FF5A09
+    Light Orange: #ec7f37
+    Dark Orange: #be4f0c
+ */
+.container{height: 100vh;}
+.formInput{margin: auto;}
+
+#forgotForm{
+    padding: 20vh 50px 50px 50px;
+    background-color: white;
+    text-align: center;
+}
+
+#forgotForm h1{color: #FF5A09; padding: 20px 0px;}
+
+#forgotForm h3{Color: #393939;}
+
+#forgotForm h4{Color: #393939; padding: 20px 0px;}
+
+#forgotSideOne{background-color: #393939; height:100vh;}
+
+#forgotSideTwo{background-color: #393939; height: 100vh;}
+
+#forgotSideThree{background-color:#be4f0c}
+
+#forgotSideFour{background-color:#be4f0c}
+
+.emailName{color: #393939;}
+
+.myButton {
+    background-color:transparent;
+    -moz-border-radius:42px;
+    -webkit-border-radius:42px;
+    border-radius:42px;
+    border:6px solid #be500c;
+    display:inline-block;
+    cursor:pointer;
+    color:#393939;
+    font-family:Arial;
+    font-size:20px;
+    font-weight:bold;
+    padding:14px 37px;
+    text-decoration:none;
+}
+.myButton:hover {
+    background-color:transparent;
+}
+.myButton:active {
+    position:relative;
+    top:1px;
+}
+
