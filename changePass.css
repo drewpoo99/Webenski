@@ -1,0 +1,30 @@
+/*Hex Colors
+    Dark Grey: #393939
+    Orange: #FF5A09
+    Light Orange: #ec7f37
+    Dark Orange: #be4f0c
+ */
+
+.container{
+    height:100vh;
+}
+.form-input{
+    margin:auto;
+}
+#changeForm{
+    padding: 30vh 50px 50px 50px;
+    background-color:white;
+    text-align:center;
+}
+#changeForm h1{color: #FF5A09;}
+#changeSide{
+    height: 100vh;
+    background-color: #393939;
+    text-align: center;
+    padding:40vh 50px 50px 50px;
+}
+
+#changeSide h1{color: #FF5A09;}
+#changeSide h3{color: white;}
+#changeSideOne{background-color: #be4f0c;}
+#changeSideTwo{background-color: #be4f0c;}
