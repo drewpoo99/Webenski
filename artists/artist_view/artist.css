@@ -1,0 +1,34 @@
+.artist-image{
+    width: 500px;
+    height: 500px;
+}
+
+.discography{
+    margin-top: 30px;
+}
+
+#disco-label{
+    text-align: center;
+}
+
+.albums h3{
+    text-align: center;
+}
+
+.singles h3{
+    text-align: center;
+}
+
+.album-image{
+    width: 150px;
+    height: 150px;
+}
+
+.list-group-item:hover{
+    background-color: #393939;
+    color: white;
+}
+
+.view-all h3{
+    text-align: center;
+}

@@ -25,10 +25,12 @@
 </head>
 
 <body>
-    <!-- Nav Bar -->
-    <div class="container-fluid">
+   <!-- Nav Bar -->
+   <div class="container-fluid">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Webenski</a>
+            <a class="navbar-brand" href="#">
+                <img src="../assets/WebenskiLogo.png" width="100" height="100" alt="">
+            </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -36,8 +38,8 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -45,17 +47,17 @@
                             Discover
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Artists</a>
-                            <a class="dropdown-item" href="#">Albums</a>
-                            <a class="dropdown-item" href="#">Songs</a>
+                            <a class="dropdown-item" href="../artists/artist_list/artist_list.html">Artists</a>
+                            <a class="dropdown-item" href="../album/album_list/album_list.html">Albums</a>
+                            <a class="dropdown-item" href="../song/song_list/song_list.html">Songs</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Playlists</a>
-                            
+                            <a class="dropdown-item" href="../playlist/playlist_list/Playlist list.html">Playlists</a>
+
                         </div>
                     </li>
                     <li class="nav-item">
-                            <a class="nav-link" href="profile.html">Profile</a>
-                        </li>
+                        <a class="nav-link" href="profile.html">Profile</a>
+                    </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
                     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -63,6 +65,8 @@
                 </form>
             </div>
         </nav>
+    </div>
+
         <!-- Identity Section -->
         <header class="row">
             <div class="col-12 identity">
@@ -112,15 +116,15 @@
                                     <div class="row">
                                         <div class="artistinfo">
                                             <div class="artistimg">
-                                                <img src="../assets/kendrick.jpg">
+                                                <img src="../assets/artists/kendrick.jpg">
                                             </div>
                                             <div class="artistname">
-                                                <h4><a href="#">Kendrick Lamar</a></h4>
+                                                <h4><a href="../artists/artist_view/artist.html">Kendrick Lamar</a></h4>
                                             </div>
                                         </div>
                                         <div class="artistinfo">
                                             <div class="artistimg">
-                                                <img src="../assets/blink182.jpg">
+                                                <img src="../assets/artists/blink182.jpg">
                                             </div>
                                             <div class="artistname">
                                                 <h4><a href="#">Blink 182</a></h4>
@@ -151,7 +155,7 @@
                                            <img src="../assets/hype.jpg">
                                        </div>
                                        <div class="playlistname">
-                                           <h4><a href="../Playlist List/Playlist list.html">Pump Up Jams</a></h4>
+                                           <h4><a href="../playlist/view_playlist/view_playlist.html">Pump Up Jams</a></h4>
                                        </div>
                                    </div>
                                    <div class="playlistinfo">
@@ -159,7 +163,7 @@
                                            <img src="../assets/worhsip.jpg">
                                        </div>
                                        <div class="playlistname">
-                                           <h4><a href="../Playlist List/Playlist list.html">Worship Tunes</a></h4>
+                                           <h4><a href="../playlist/view_playlist/view_playlist.html">Worship Tunes</a></h4>
                                        </div>
                                    </div>
                                </div>
@@ -184,10 +188,10 @@
                                 <div class="row">
                                     <div class="albuminfo">
                                         <div class="albumcover">
-                                            <img src="../assets/postmalone.jpg">
+                                            <img src="../assets/album-covers/postmalone.jpg">
                                         </div>
                                         <div class="albumname">
-                                            <h4><a href="../View Album/View Album.html">Hollywood's Bleeding</a></h4>
+                                            <h4><a href="../album/view_album/View Album.html">Hollywood's Bleeding</a></h4>
                                         </div>
                                         <div class="albumartist">
                                             <h6><a href="#">Post Malone</a></h6>
@@ -195,10 +199,10 @@
                                     </div>
                                     <div class="albuminfo">
                                         <div class="albumcover">
-                                            <img src="../assets/tylerthecreator.jpg">
+                                            <img src="../assets/album-covers/tylerthecreator.jpg">
                                         </div>
                                         <div class="albumname">
-                                            <h4><a href="../View Album/View Album.html">Flower Boy</a></h4>
+                                            <h4><a href="../album/view_album/View Album.html">Flower Boy</a></h4>
                                         </div>
                                         <div class="albumartist">
                                             <h6><a href="#">Tyler, The Creator</a></h6>
@@ -226,30 +230,30 @@
                                 <div class="row">
                                     <div class="songinfo">
                                         <div class="songpicture">
-                                            <img src="../assets/hillsong.jpg">
+                                            <img src="../assets/album-covers/hillsong.jpg">
                                         </div>
                                         <div class="songtitle">
-                                            <h4><a href="../View Song/View Song.html">Who You Say I Am</a></h4>
+                                            <h4><a href="../song/view_song/View Song.html">Who You Say I Am</a></h4>
                                         </div>
                                         <div class="songartist">
                                             <h6><a href="#">Hillsong United</a></h6>
                                         </div>
                                         <div class="songalbum">
-                                            <h6><a href="../View Album/View Album.html">There Is More (Live)</a></h6>
+                                            <h6><a href="../album/view_album/View Album.html">There Is More (Live)</a></h6>
                                         </div>
                                     </div>
                                     <div class="songinfo">
                                         <div class="songpicture">
-                                            <img src="../assets/hillsong2.jpg">
+                                            <img src="../assets/album-covers/hillsong2.jpg">
                                         </div>
                                         <div class="songtitle">
-                                            <h4><a href="../View Song/View Song.html">So Will I (100 Billion X)</a></h4>
+                                            <h4><a href="../song/view_song/View Song.html">So Will I (100 Billion X)</a></h4>
                                         </div>
                                         <div class="songartist">
                                             <h6><a href="#">Hillsong United</a></h6>
                                         </div>
                                         <div class="songalbum">
-                                            <h6><a href="../View Album/View Album.html">Wonder</a></h6>
+                                            <h6><a href="../album/view_album/View Album.html">Wonder</a></h6>
                                         </div>
                                     </div>
                                 </div>
