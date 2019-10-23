@@ -6,9 +6,11 @@ body {
     position: fixed;
     
   }
-h1{
-  text-align: center;
+
+h1 {
+    text-align: center;
 }
+
   .nav-link{
     color: #FF5A09;
   }
