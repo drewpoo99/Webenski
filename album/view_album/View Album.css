@@ -6,8 +6,12 @@ Dark Orange: #be4f0c
 Light Grey: #404040
 */
 
+body {
+    background-color: #393939;
+}
+
 p {
-    color: #000;
+    color: #FFFFFF;
     margin: 0;
 }
 
@@ -33,9 +37,8 @@ h2 {
 
 
 h3 {
-    padding-top: 50px;
     padding-left: 30px;
-    color: #000;
+    color: #FFFFFF;
 }
 
 
@@ -51,13 +54,12 @@ h6 {
 }
 
 ol {
-    color: #000;
+    color: #FFFFFF;
     text-align: left;
-
 }
 
 ul {
-    color: #000;
+    color: #FFFFFF;
     list-style: none;
     text-align: left;
 }
@@ -66,6 +68,11 @@ li {
     margin-bottom: 10px;
 }
 
+hr {
+    border-color: #FFFFFF;
+    margin-top: 5px;
+    padding: 10px;
+}
 .or {
     margin-left: 5px;
 }
@@ -107,7 +114,61 @@ li {
     border-color: white;
     background-color: white;
 }
+/*Liam's Edits begin here*/
+/*btn-secondary added by Liam*/
+.btn-secondary{
+    background-color: #FF5A09;
+    color: white;
+    border-color: #FF5A09;
+    width: 200px;
+    margin-left: 30px;
+    margin-bottom: 60px;
+    margin-top: 40px;
+}
 
+.btn-secondary:hover{
+    background-color: #be4f0c;
+    border-color: #be4f0c;
+}
+
+/*Used for temporary star system*/
+.rate {
+    float: left;
+    height: 46px;
+    padding: 0 10px;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
+/*Entirety wont be used in final project, credit goes to https://codepen.io/tammykimkim/pen/yegZRw*/
+/*Liam's Edits end here*/
 a{
     color: #393939;
 }
@@ -115,4 +176,3 @@ a{
 a:hover{
     color: #444444
 }
-
