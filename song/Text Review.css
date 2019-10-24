@@ -1,0 +1,65 @@
+/*  Color Scheme
+Dark Grey: #393939
+Orange: #FF5A09
+Light Orange: #ec7f37
+Dark Orange: #be4f0c
+Light Grey: #404040
+*/
+
+/*  Color Scheme
+Dark Grey: #393939
+Orange: #FF5A09
+Light Orange: #ec7f37
+Dark Orange: #be4f0c
+Light Grey: #404040
+*/
+
+body {
+    background-color: #FFFFFF;
+}
+
+p {
+    color: #FF5A09;
+    margin: 0;
+}
+
+h1 {
+    color: #FF5A09;
+}
+
+h2 {
+    color: #000;
+    padding-top: 75px;
+}
+
+h5 {
+    color: #000;
+    text-align: center;
+
+}
+
+h6 {
+    color: #000;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.WB {
+    height: 300px;
+    width: 300px;
+    margin-bottom: 50px;
+}
+
+.textbox {
+    height: 200px;
+    width: 600px;
+
+}
+
+.submit {
+    padding-left: 500px;
+}
+
+.col-6 {
+    padding-top: 50px;
+}
