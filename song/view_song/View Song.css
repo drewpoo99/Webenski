@@ -7,7 +7,7 @@ Light Grey: #404040
 */
 
 body {
-    background-color: #393939;
+
 }
 
 p {
@@ -36,6 +36,7 @@ h3 {
 h4 {
     color: #FF5A09;
     padding-top: 50px;
+    padding-left: 200px;
 }
 
 
@@ -49,6 +50,7 @@ h5 {
 
 h6 {
     color: #000;
+    padding-left: 200px;
 }
 
 .WB {
