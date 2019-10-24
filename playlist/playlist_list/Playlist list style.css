@@ -7,7 +7,7 @@ Light Grey: #404040
 */
 
 body {
-    background-color: #393939;
+
 }
 
 p {
@@ -37,7 +37,7 @@ h2 {
 
 
 h5 {
-    color: #FFFFFF;
+    color: #000;
     margin: 0;
 
 }
@@ -72,11 +72,9 @@ h6 {
 .search input[type=text] {
     float: right;
     padding: 6px;
-    border: none;
     margin-top: 8px;
     margin-right: 16px;
     font-size: 17px;
-    border-radius: 25px;
 }
 
 .sl {
