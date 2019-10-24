@@ -14,17 +14,55 @@
     <title>View Album</title>
 </head>
 <body>
+<!-- Nav Bar -->
+<div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src= "WebenskiLogo.png" width="100" height="100" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Discover
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="../../artists/artist_list/artist_list.html">Artists</a>
+                        <a class="dropdown-item" href="../../album/album_list/album_list.html">Albums</a>
+                        <a class="dropdown-item" href="../../song/song_list/song_list.html">Songs</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="../../playlist/playlist_list/Playlist list.html">Playlists</a>
+
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../../profile/profile.html">Profile</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+</div>
+
+<!-- View Album -->
         <div class="container-fluid">
-
-            <h1>
-                <img alt="logo" class="logo" src="../../assets/WebenskiLogo.png">
-            </h1>
-
             <div class="container">
                 <div class="row">
                     <div class="col-sm-8">
                         <h3>Album Name</h3>
-                        <img alt="alt logo" class="WB" src="../../assets/WB Logo.png">
+                        <img alt="alt logo" class="WB" src="WB%20Logo.png">
                         <h5>By Artist</h5>
                         <h6># Songs, # min, Genre</h6>
                         <button type="button" class="btn btn-primary">Play</button>
@@ -66,7 +104,6 @@
                              <li>Song Eleven</li>
                              <li>Song Twelve</li>
                          </ul>
-
                     </div>
 
                     <div class="col-sm-4">

@@ -6,12 +6,8 @@ Dark Orange: #be4f0c
 Light Grey: #404040
 */
 
-body {
-    background-color: #393939;
-}
-
 p {
-    color: #FFFFFF;
+    color: #000;
     margin: 0;
 }
 
@@ -54,12 +50,13 @@ h6 {
 }
 
 ol {
-    color: #FFFFFF;
+    color: #000;
     text-align: left;
+
 }
 
 ul {
-    color: #FFFFFF;
+    color: #000;
     list-style: none;
     text-align: left;
 }
