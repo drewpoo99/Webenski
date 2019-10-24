@@ -1,0 +1,178 @@
+/*  Color Scheme
+Dark Grey: #393939
+Orange: #FF5A09
+Light Orange: #ec7f37
+Dark Orange: #be4f0c
+Light Grey: #404040
+*/
+
+body {
+    background-color: #393939;
+}
+
+p {
+    color: #FFFFFF;
+    margin: 0;
+}
+
+h1 {
+    color: #FF5A09;
+    background-color: #000;
+    text-align: center;
+    border-radius: 25px;
+    padding: 2px;
+    margin-bottom: 80px;
+}
+
+h2 {
+    color: #FF5A09;
+    width: 75%;
+    text-align: left;
+    margin-left: 5px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    border-radius: 25px;
+    padding-left: 20px;
+}
+
+
+h3 {
+    padding-left: 30px;
+    color: #FFFFFF;
+}
+
+
+h5 {
+    padding-left: 30px;
+    color: #FF5A09;
+    margin: 0;
+}
+
+h6 {
+    padding-left: 30px;
+    color: #be4f0c;
+}
+
+ol {
+    color: #FFFFFF;
+    text-align: left;
+}
+
+ul {
+    color: #FFFFFF;
+    list-style: none;
+    text-align: left;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+hr {
+    border-color: #FFFFFF;
+    margin-top: 5px;
+    padding: 10px;
+}
+.or {
+    margin-left: 5px;
+}
+
+.WB {
+    display: block;
+    width: 300px;
+    height: 300px;
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+.logo {
+    height: 100px;
+    width: 100px;
+}
+
+.btn-primary{
+    background-color: #FF5A09;
+    color: white;
+    border-color: #FF5A09;
+    width: 100px;
+    margin-left: 30px;
+    margin-bottom: 60px;
+}
+
+.btn-primary:hover{
+    background-color: #be4f0c;
+    border-color: #be4f0c;
+}
+
+.btn-outline-light{
+    background-color: #be4f0c;
+    border-color: #be4f0c;
+}
+
+.btn-outline-light:hover{
+    color: #FF5A09;
+    border-color: white;
+    background-color: white;
+}
+/*Liam's Edits begin here*/
+/*btn-secondary added by Liam*/
+.btn-secondary{
+    background-color: #FF5A09;
+    color: white;
+    border-color: #FF5A09;
+    width: 200px;
+    margin-left: 30px;
+    margin-bottom: 60px;
+    margin-top: 40px;
+}
+
+.btn-secondary:hover{
+    background-color: #be4f0c;
+    border-color: #be4f0c;
+}
+
+/*Used for temporary star system*/
+.rate {
+    float: left;
+    height: 46px;
+    padding: 0 10px;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
+/*Entirety wont be used in final project, credit goes to https://codepen.io/tammykimkim/pen/yegZRw*/
+/*Liam's Edits end here*/
+a{
+    color: #393939;
+}
+
+a:hover{
+    color: #444444
+}
