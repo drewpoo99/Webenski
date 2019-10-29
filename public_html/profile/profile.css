@@ -1,0 +1,101 @@
+
+.nav-row{
+    background-color: lightblue;
+}
+
+.identity{
+    background-color: #393939;
+    color: white;
+    text-align: center;
+    height: 25vh;
+    margin: 15px auto 15px auto;
+}
+
+.identity a{
+    color: white;
+}
+.avatar{
+    padding-top: 25px;
+    margin: auto;
+}
+
+.nameplate{
+    margin: auto;
+}
+
+.nameplate p {
+    margin-bottom: 0px;
+}
+
+.settings{
+    margin: auto;
+}
+
+#main-section-heading{
+    text-align: center;
+    margin-right: 15%;
+}
+
+
+/* Library Section */
+#libraryHeading{
+    text-align: center;
+    color: #393939;
+}
+
+.library div{
+    margin: 10px;
+    /* background-color: white; */
+}
+
+.card-header{
+    background-color: white;
+}
+
+.card-header button{
+    font-size: 16pt;
+    color: #393939;
+}
+
+.card-header button:hover{
+    color: #474747;
+}
+.add{
+    float: right;
+}
+
+.artistinfo{
+    text-align: center;
+}
+
+.artistimg img{
+    width: 300px;
+    height: 300px;
+}
+
+.playlistinfo{
+    text-align: center;
+}
+
+.playlistimg img{
+    width: 300px;
+    height: 300px;
+}
+
+.albuminfo{
+    text-align: center;
+}
+
+.albumcover img{
+    width: 300px;
+    height: 300px
+}
+
+.songinfo{
+    text-align: center;
+}
+
+.songpicture img{
+    width: 300px;
+    height: 300px;
+}
