@@ -1,4 +1,27 @@
-<!-- Profile Settings Page
+<?php
+/* Smarty version 3.1.33, created on 2019-11-13 20:38:18
+  from 'C:\Apache24\htdocs\Webenski\public_html\template\profileSettings.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.33',
+  'unifunc' => 'content_5dcc69ba1071e5_47404472',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'bb3e7901ac8395db51fd3b02c810b2b3e5aa9519' => 
+    array (
+      0 => 'C:\\Apache24\\htdocs\\Webenski\\public_html\\template\\profileSettings.tpl',
+      1 => 1573677093,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_5dcc69ba1071e5_47404472 (Smarty_Internal_Template $_smarty_tpl) {
+?><!-- Profile Settings Page
     *author: Drew Weaver
     *last updated: 9/25/2019
 
@@ -24,7 +47,7 @@
     <!-- File Specific Styles -->
     <link rel="stylesheet" href="settings.css">
 </head>
-<!-- 
+
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">Webenski</a>
@@ -53,7 +76,7 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="profile.html">Profile</a>
+                    <a class="nav-link" href="../profile/profile.php">Profile</a>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
@@ -67,28 +90,26 @@
             <div class="avatar">
                 <img src="../assets/man.png">
                 <a href="../passwordManagement/changePass.html">Change Password</a>
+                <p>*This form will only work if all of the fields are filled in* </p>
             </div>
         </div>
-        <form class="settings-form">
+        <form class="settings-form" action="settings.php" method="POST">
             <div class="form-group row">
                 <div class="col-8">
-                    <label for="name">Name</label>
-                    <input id="name" name="name" type="text" class="form-control"
-                    placeholder="John Q. Smith">
+                    <label for="first_name">First Name</label>
+                    <input id="first_name" name="first_name" type="text" class="form-control">
                 </div>
             </div>
             <div class="form-group row">
                 <div class="col-8">
-                    <label for="username">Username</label>
-                    <input id="username" name="username" type="text" class="form-control"
-                    placeholder="JonnySmith27">
+                    <label for="last_name">Last Name</label>
+                    <input id="last_name" name="last_name" type="text" class="form-control">
                 </div>
             </div>
             <div class="form-group row">
                 <div class="col-8">
                         <label for="email">Email</label>
-                    <input id="email" name="email" type="text" class="form-control"
-                    placeholder="jqsmith@email.com">
+                    <input id="email" name="email" type="text" class="form-control">
                 </div>
             </div>
             <div class="form-group row">
@@ -100,15 +121,22 @@
     </div>
 
     <!-- Boostrap -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    <?php echo '<script'; ?>
+ src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        crossorigin="anonymous"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        crossorigin="anonymous"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous"><?php echo '</script'; ?>
+>
 </body>
 
-</html> -->
+</html><?php }
+}

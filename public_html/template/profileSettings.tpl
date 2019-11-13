@@ -24,7 +24,7 @@
     <!-- File Specific Styles -->
     <link rel="stylesheet" href="settings.css">
 </head>
-<!-- 
+
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">Webenski</a>
@@ -53,7 +53,7 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="profile.html">Profile</a>
+                    <a class="nav-link" href="../profile/profile.php">Profile</a>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
@@ -67,28 +67,26 @@
             <div class="avatar">
                 <img src="../assets/man.png">
                 <a href="../passwordManagement/changePass.html">Change Password</a>
+                <p>*This form will only work if all of the fields are filled in* </p>
             </div>
         </div>
-        <form class="settings-form">
+        <form class="settings-form" action="settings.php" method="POST">
             <div class="form-group row">
                 <div class="col-8">
-                    <label for="name">Name</label>
-                    <input id="name" name="name" type="text" class="form-control"
-                    placeholder="John Q. Smith">
+                    <label for="first_name">First Name</label>
+                    <input id="first_name" name="first_name" type="text" class="form-control">
                 </div>
             </div>
             <div class="form-group row">
                 <div class="col-8">
-                    <label for="username">Username</label>
-                    <input id="username" name="username" type="text" class="form-control"
-                    placeholder="JonnySmith27">
+                    <label for="last_name">Last Name</label>
+                    <input id="last_name" name="last_name" type="text" class="form-control">
                 </div>
             </div>
             <div class="form-group row">
                 <div class="col-8">
                         <label for="email">Email</label>
-                    <input id="email" name="email" type="text" class="form-control"
-                    placeholder="jqsmith@email.com">
+                    <input id="email" name="email" type="text" class="form-control">
                 </div>
             </div>
             <div class="form-group row">
@@ -111,4 +109,4 @@
         crossorigin="anonymous"></script>
 </body>
 
-</html> -->
+</html>

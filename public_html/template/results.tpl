@@ -22,9 +22,9 @@
     <link rel="stylesheet" href="../globalstyles.css">
 
     <!-- File Specific Styles -->
-    <link rel="stylesheet" href="settings.css">
+    <link rel="stylesheet" href="../profile/settings.css">
 </head>
-<!-- 
+
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">Webenski</a>
@@ -53,7 +53,7 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="profile.html">Profile</a>
+                    <a class="nav-link" href="../profile/profile.php">Profile</a>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
@@ -62,41 +62,28 @@
             </form>
         </div>
     </nav>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="avatar">
-                <img src="../assets/man.png">
-                <a href="../passwordManagement/changePass.html">Change Password</a>
+    <div class="container">
+        <div class="col-12">
+            <div class="row results">
+            <h1>Profile Updated!</h1>
+            </div>
+
+            <div class="row">
+            <p>Your new first name: {$new_first_name}</p>
+            </div>
+
+            <div class="row">
+            <p>Your new last name: {$new_last_name}</p>
+            </div>
+
+            <div class="row">
+            <p>Your new email: {$new_email}</p>
+            </div>
+
+            <div class="row">
+            <a href="../profile/profile.php">Return to profile</a>
             </div>
         </div>
-        <form class="settings-form">
-            <div class="form-group row">
-                <div class="col-8">
-                    <label for="name">Name</label>
-                    <input id="name" name="name" type="text" class="form-control"
-                    placeholder="John Q. Smith">
-                </div>
-            </div>
-            <div class="form-group row">
-                <div class="col-8">
-                    <label for="username">Username</label>
-                    <input id="username" name="username" type="text" class="form-control"
-                    placeholder="JonnySmith27">
-                </div>
-            </div>
-            <div class="form-group row">
-                <div class="col-8">
-                        <label for="email">Email</label>
-                    <input id="email" name="email" type="text" class="form-control"
-                    placeholder="jqsmith@email.com">
-                </div>
-            </div>
-            <div class="form-group row">
-                <div class="offset-3 col-8">
-                    <button name="submit" type="submit" class="btn btn-primary">Submit</button>
-                </div>
-            </div>
-        </form>
     </div>
 
     <!-- Boostrap -->
@@ -111,4 +98,4 @@
         crossorigin="anonymous"></script>
 </body>
 
-</html> -->
+</html>
