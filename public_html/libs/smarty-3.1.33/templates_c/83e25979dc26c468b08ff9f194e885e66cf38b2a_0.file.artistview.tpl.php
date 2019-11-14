@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-11-14 16:43:15
+/* Smarty version 3.1.33, created on 2019-11-14 17:45:46
   from 'C:\Apache24\htdocs\Webenski\public_html\template\artistview.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5dcd84231ccb21_05303476',
+  'unifunc' => 'content_5dcd92cad1b848_46133298',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '83e25979dc26c468b08ff9f194e885e66cf38b2a' => 
     array (
       0 => 'C:\\Apache24\\htdocs\\Webenski\\public_html\\template\\artistview.tpl',
-      1 => 1573749788,
+      1 => 1573753545,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5dcd84231ccb21_05303476 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5dcd92cad1b848_46133298 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -69,7 +69,7 @@ function content_5dcd84231ccb21_05303476 (Smarty_Internal_Template $_smarty_tpl)
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="../artists/artist.php">Artists</a>
                             <a class="dropdown-item" href="../../album/album_list/album_list.html">Albums</a>
-                            <a class="dropdown-item" href="../../song/song_list/song_list.html">Songs</a>
+                            <a class="dropdown-item" href="../song/index.php">Songs</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="../../playlist/playlist_list/Playlist list.html">Playlists</a>
 
@@ -124,7 +124,7 @@ $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->t
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['artistSong']->value => $_smarty_tpl->tpl_vars['song']->value) {
 ?>
-                                <a href="../../album/view_album/View Album.html" class="list-group-item list-group-item-action">
+                                <a href="#" class="list-group-item list-group-item-action">
                         <div class="row">
                             <div class="col-6">
                                 <img class="album-image" src="../assets/WB Logo.png" alt="">

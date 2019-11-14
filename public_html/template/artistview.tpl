@@ -45,7 +45,7 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="../artists/artist.php">Artists</a>
                             <a class="dropdown-item" href="../../album/album_list/album_list.html">Albums</a>
-                            <a class="dropdown-item" href="../../song/song_list/song_list.html">Songs</a>
+                            <a class="dropdown-item" href="../song/index.php">Songs</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="../../playlist/playlist_list/Playlist list.html">Playlists</a>
 
@@ -96,7 +96,7 @@
                 <div class="list-group">
                 {foreach $artist_songs as $artistSong => $song}
                 {* <p>{$song}</p> *}
-                <a href="../../album/view_album/View Album.html" class="list-group-item list-group-item-action">
+                <a href="#" class="list-group-item list-group-item-action">
                         <div class="row">
                             <div class="col-6">
                                 <img class="album-image" src="../assets/WB Logo.png" alt="">

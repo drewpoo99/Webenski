@@ -47,7 +47,7 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../../profile/profile.html">Profile</a>
+                        <a class="nav-link" href="../profile/profile.php">Profile</a>
                     </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">

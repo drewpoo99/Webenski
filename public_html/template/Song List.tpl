@@ -10,8 +10,10 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-    <link rel="stylesheet" href= View%20Song.css>
-    <title>Song View </title>
+   <!-- File CSS -->
+    <link rel="stylesheet" href="globalstyles.css" >
+    <link rel="stylesheet" href="../song/song_list/Song%20List.css">
+    <title>Song List</title>
 </head>
 <body>
 <!-- Nav Bar -->
@@ -56,25 +58,68 @@
     </nav>
 </div>
 
-<!-- View Song -->
-        <div class="container-fluid">
+    <!-- Playlist Section -->
+    <div class="container">
+        <div class="row">
+            <div class="col-3">
+                <h1>Song List</h1>
+            </div>
+            <div class="col-4">
+                <button type="button" class="btn btn-primary">Play</button>
+            </div>
+         <div class="col-5">
+         </div>
 
-            <h4>{$Playlist_Name}</h4>
-            <h6>Added by {$User_Name}</h6>
-            <h5> {$Artist_Name}</h5>
-           <h3>{$Song_Name}</h3> </a>
-            <img class="WB" src="WB%20Logo.png">
-            <p>{$Album_Name}</p>
-            <p class="sl">{$SongTime}</p>
-            <div class="star">
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star"></span>
-                <span class="fa fa-star"></span>
+        <div class="row2">
+            <div class="col-sm-2">
+            <h6 class="hash">#</h6>
+            <ol class="n">
+            {foreach $Song_Number as $SongNumber => $number}
+                
+                <li>{$number}</li> </a>
+            {/foreach}
+            </ol>
             </div>
         </div>
-</body>
+        <div class="col-sm-2">
+            <h6>Title</h6>
+            <ul class="song">
+                {foreach $Song_Name as $SongName => $value}
+                <a href="songView.php">
+                    <li>{$value}</li> </a>
+                {/foreach}
+
+            </ul>
+        </div>
+        <div class="col-sm-2">
+            <h6>Artist Name</h6>
+            <ul class="song">
+            {* Modded By Drew *}
+            {foreach $Artist_ID as $aristid => $id}
+                    <li>{$id}</li> </a>
+            {/foreach}
+            </ul>
+        </div>
+        <div class="col-sm-2">
+            <h6>Album Title</h6>
+            <ul class="song">
+            {* Modded By Drew *}
+            {foreach $Album_Name as $AlbumName => $album}
+                <li>{$album}</li> </a>
+            {/foreach}
+            </ul>
+        </div>
+        <div class="col-sm-2">
+            <h6>Song Time</h6>
+            <ul class="song">
+            {* Modded By Drew *}
+            {foreach $Song_Time as $SongTime => $time}
+                    <li>{$time}</li> </a>
+            {/foreach}
+            </ul>
+        </div>
+    </div>
+</div>
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
