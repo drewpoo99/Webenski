@@ -5,6 +5,10 @@
 define('DB_USER', 'webenski');
 define('DB_PASSWORD', '@PHPmyadmin27');
 define('DB_NAME', 'musicDB');
+// put your own creds in here
+define('DB_USER', '');
+define('DB_PASSWORD', '');
+define('DB_NAME', ''); 
 $db_name = DB_NAME;
 $username = DB_USER;
 $password = DB_PASSWORD;
