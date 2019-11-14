@@ -14,7 +14,7 @@ $stmt->execute();
 while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
     $user_email = $row['Email'];
     $user_username = $row['username'];
-    $user_full_name =$row['First_Name'] . " " .$row['Last_Name'];
+    $user_full_name = $row['First_Name'] . " " .$row['Last_Name'];
 }
 
 

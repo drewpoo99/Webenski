@@ -47,7 +47,7 @@
                             Discover
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="../artists/artist_list/artist_list.html">Artists</a>
+                            <a class="dropdown-item" href="../artists/artist.php">Artists</a>
                             <a class="dropdown-item" href="../album/album_list/album_list.html">Albums</a>
                             <a class="dropdown-item" href="../song/song_list/song_list.html">Songs</a>
                             <div class="dropdown-divider"></div>
@@ -92,10 +92,10 @@
     <main class="container-fluid">
         <div class="row">
             <div class="col-12">
-                <h1 id="libraryHeading">My Library</h1>
+                <h1 id="libraryHeading">My Library (Coming Soon)</h1>
             </div>
             <!-- Library Section -->
-            <section class='library col-12'>
+            {* <section class='library col-12'>
                 <div class="accordion" id="accordionExample">
                         <div class="card">
                             <div class="card-header" id="headingZero">
@@ -261,7 +261,7 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> *}
         </div>
     </main>
 

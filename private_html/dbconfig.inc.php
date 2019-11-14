@@ -1,5 +1,7 @@
 <?php
 
+
+//Delete my username, password, and db name if working on your local machine
 define('DB_USER', 'webenski');
 define('DB_PASSWORD', '@PHPmyadmin27');
 define('DB_NAME', 'musicDB');

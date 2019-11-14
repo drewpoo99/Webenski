@@ -32,3 +32,17 @@ h1{
       width: 150px;
       height: 150px;
   }
+
+
+  .artist-list{
+    margin: 0 auto;
+  }
+
+  .album-image img{
+    width: 150px;
+    height: 150px;
+  }
+
+  .list_group_item:hover{
+    background-color: red;
+  }

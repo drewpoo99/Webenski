@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-11-14 16:34:45
-  from 'C:\Apache24\htdocs\Webenski\public_html\template\profile.tpl' */
+/* Smarty version 3.1.33, created on 2019-11-14 16:55:51
+  from 'C:\Apache24\htdocs\Webenski\public_html\template\artists.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5dcd82256d91b1_50869958',
+  'unifunc' => 'content_5dcd8717efbd20_63566180',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '37997b0e31c15c7126d315ac3dbeb33efac57bf9' => 
+    'f6c5f568a72d9293b5f84da26c8f2be0fcd67c1d' => 
     array (
-      0 => 'C:\\Apache24\\htdocs\\Webenski\\public_html\\template\\profile.tpl',
-      1 => 1573749283,
+      0 => 'C:\\Apache24\\htdocs\\Webenski\\public_html\\template\\artists.tpl',
+      1 => 1573750550,
       2 => 'file',
     ),
   ),
@@ -20,39 +20,31 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5dcd82256d91b1_50869958 (Smarty_Internal_Template $_smarty_tpl) {
-?><!-- Profile Page
-    *author: Drew Weaver
-    *last updated: 9/25/2019
-
-    *modified by:
-    *on:
--->
-<!DOCTYPE html>
+function content_5dcd8717efbd20_63566180 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Profile</title>
-
+    <title>Artists</title>
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    
-    <!-- Bootstrap Overriding Styles -->
-    <link rel="stylesheet" href="../globalstyles.css">
 
-    <!-- File Specific Styles -->
-    <link rel="stylesheet" href="../profile/profile.css">
+    <!-- Bootstrap Overriding Styles -->
+    <link rel="stylesheet" href="../../globalstyles.css">
+    <link rel="stylesheet" href="../artists/artist_list/artist_list.css">
+
 </head>
 
-<body>
-   <!-- Nav Bar -->
-   <div class="container-fluid">
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="1">
+    <!-- Nav Bar -->
+    <div class="container-fluid">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="#">
-                <img src="../assets/WebenskiLogo.png" width="100" height="100" alt="">
+                <img src="../../assets/WebenskiLogo.png" width="100" height="100" alt="">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -71,10 +63,11 @@ function content_5dcd82256d91b1_50869958 (Smarty_Internal_Template $_smarty_tpl)
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="../artists/artist.php">Artists</a>
-                            <a class="dropdown-item" href="../album/album_list/album_list.html">Albums</a>
-                            <a class="dropdown-item" href="../song/song_list/song_list.html">Songs</a>
+                            <a class="dropdown-item" href="../album/">Albums</a>
+                            <a class="dropdown-item" href="../../song/song_list/song_list.html">Songs</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="../playlist/playlist_list/Playlist list.html">Playlists</a>
+                            <a class="dropdown-item"
+                                href="../../playlist/playlist_list/Playlist list.html">Playlists</a>
 
                         </div>
                     </li>
@@ -90,44 +83,26 @@ function content_5dcd82256d91b1_50869958 (Smarty_Internal_Template $_smarty_tpl)
         </nav>
     </div>
 
-        <!-- Identity Section -->
-        <header class="row">
-            <div class="col-12 identity">
-                <div class="row">
-                    <div class="col-3 avatar">
-                        <img src="../assets/man.png">
-                    </div>
-                    <div class="col-3 nameplate">
-                        <h1><?php echo $_smarty_tpl->tpl_vars['user_username']->value;?>
-</h1>
-                        <p><?php echo $_smarty_tpl->tpl_vars['user_full_name']->value;?>
-</p>
-                        <p><?php echo $_smarty_tpl->tpl_vars['user_email']->value;?>
-</p>
-                    </div>
-                    <div class="col-3 settings">
-                        <p><a href="../profile/settings.php">Settings</a></p>
-                        <p><a href="../login/login.html">Log Out</a></p>
-                    </div>
-                </div>
-            </div>
-        </header>
-    </div>
+    <h1>Artists Library</h1>
+    <!-- Artist List -->
+            <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['artistList']->value, 'artist', false, 'artistName');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['artistName']->value => $_smarty_tpl->tpl_vars['artist']->value) {
+?>
+            <h3> Name: <?php echo $_smarty_tpl->tpl_vars['artist']->value;?>
+</h3>
+        <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+        <a href="viewArtist.php">View Single Artist</a>
+        
 
-    <!-- Main Section -->
-    <main class="container-fluid">
-        <div class="row">
-            <div class="col-12">
-                <h1 id="libraryHeading">My Library (Coming Soon)</h1>
-            </div>
-            <!-- Library Section -->
-                    </div>
-    </main>
+                                        
 
 
-
-
-    <!-- Boostrap -->
+        <!-- Boostrap -->
     <?php echo '<script'; ?>
  src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -144,5 +119,6 @@ function content_5dcd82256d91b1_50869958 (Smarty_Internal_Template $_smarty_tpl)
         crossorigin="anonymous"><?php echo '</script'; ?>
 >
 </body>
+
 </html><?php }
 }
