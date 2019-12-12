@@ -2,9 +2,9 @@
 
 
 //Delete my username, password, and db name if working on your local machine
-define('DB_USER', 'webenski');
-define('DB_PASSWORD', '@PHPmyadmin27');
-define('DB_NAME', 'musicDB');
+define('DB_USER', '');
+define('DB_PASSWORD', '');
+define('DB_NAME', '');
 
 $db_name = DB_NAME;
 $username = DB_USER;
