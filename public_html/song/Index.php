@@ -1,11 +1,11 @@
 <?php
 
 require_once "../../private_html/dbconfig.inc.php";
-require_once "..//libs/smarty-3.1.33/libs/Smarty.class.php";
+require_once "../libs/smarty-3.1.33/libs/Smarty.class.php";
 
 $smarty = new Smarty();
 $smarty->template_dir = "../template";
-$smarty->compile_dir="../public_html/libs/smarty_php/templates_c" ;
+$smarty->compile_dir="../libs/smarty-3.1.33/templates_c" ;
 
 $sql ="SELECT Song_OID, Title, length as SongTime, Album_Name as Album, Artist_FK
      FROM Song

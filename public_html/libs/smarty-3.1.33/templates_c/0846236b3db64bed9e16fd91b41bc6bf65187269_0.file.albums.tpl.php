@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-12-12 01:51:55
-  from 'C:\Apache24\htdocs\Webenski_Development\public_html\template\profile.tpl' */
+/* Smarty version 3.1.33, created on 2019-12-12 12:46:20
+  from '/var/www/public_html/template/albums.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5df19d3b2955a3_26346854',
+  'unifunc' => 'content_5df27cecee7c65_51602877',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '6af3b9613edab0cb277410200df845100f77885e' => 
+    '0846236b3db64bed9e16fd91b41bc6bf65187269' => 
     array (
-      0 => 'C:\\Apache24\\htdocs\\Webenski_Development\\public_html\\template\\profile.tpl',
-      1 => 1576115513,
+      0 => '/var/www/public_html/template/albums.tpl',
+      1 => 1576172770,
       2 => 'file',
     ),
   ),
@@ -20,36 +20,28 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5df19d3b2955a3_26346854 (Smarty_Internal_Template $_smarty_tpl) {
-?><!-- Profile Page
-    *author: Drew Weaver
-    *last updated: 9/25/2019
-
-    *modified by:
-    *on:
--->
-<!DOCTYPE html>
+function content_5df27cecee7c65_51602877 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Profile</title>
-
+    <title>Albums</title>
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    
-    <!-- Bootstrap Overriding Styles -->
-    <link rel="stylesheet" href="../globalstyles.css">
 
-    <!-- File Specific Styles -->
-    <link rel="stylesheet" href="../profile/profile.css">
+    <!-- Bootstrap Overriding Styles -->
+    <link rel="stylesheet" href="../../globalstyles.css">
+    <link rel="stylesheet" href="../artists/artist_list.css">
+
 </head>
 
-<body>
-   <!-- Nav Bar -->
-   <div class="container-fluid">
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="1">
+    <!-- Nav Bar -->
+    <div class="container-fluid">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="#">
                 <img src="../assets/WebenskiLogo.png" width="100" height="100" alt="">
@@ -72,9 +64,10 @@ function content_5df19d3b2955a3_26346854 (Smarty_Internal_Template $_smarty_tpl)
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="../artists/artist.php">Artists</a>
                             <a class="dropdown-item" href="../album/albumList.php">Albums</a>
-                            <a class="dropdown-item" href="../song/index.php">Songs</a>
+                            <a class="dropdown-item" href="../song/view_song/Index.php">Songs</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="../playlist/playlist_list/Playlist list.html">Playlists</a>
+                            <a class="dropdown-item"
+                            <a class="dropdown-item" href="../playlist/view_playlist/index.php">Playlists</a>
 
                         </div>
                     </li>
@@ -90,42 +83,29 @@ function content_5df19d3b2955a3_26346854 (Smarty_Internal_Template $_smarty_tpl)
         </nav>
     </div>
 
-        <!-- Identity Section -->
-        <header class="row">
-            <div class="col-12 identity">
-                <div class="row">
-                    <div class="col-3 avatar">
-                        <img src="../assets/man.png">
-                    </div>
-                    <div class="col-3 nameplate">
-                        <h1><?php echo $_smarty_tpl->tpl_vars['user_username']->value;?>
-</h1>
-                        <p><?php echo $_smarty_tpl->tpl_vars['user_full_name']->value;?>
-</p>
-                        <p><?php echo $_smarty_tpl->tpl_vars['user_email']->value;?>
-</p>
-                    </div>
-                    <div class="col-3 settings">
-                        <p><a href="../profile/settings.php">Settings</a></p>
-                        <p><a href="../login/login.html">Log Out</a></p>
-                    </div>
-                </div>
-            </div>
-        </header>
+    <div class="container-fluid">
+    <h1>Album Library</h1>
+        <div class="col-4 artist-list">
+            <ul class="list-group">
+            <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['albumList']->value, 'album', false, 'albumKey');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['albumKey']->value => $_smarty_tpl->tpl_vars['album']->value) {
+?>    
+                <li class="list-group-item album-img">
+                    <img src= <?php echo $_smarty_tpl->tpl_vars['album']->value['Image'];?>
+>
+                    <p><a href="view_album/view_album.php"> <?php echo $_smarty_tpl->tpl_vars['album']->value['Name'];?>
+ </a></p>
+		    
+                </li>
+            <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+            </ul>
+        </div>
     </div>
-
-    <!-- Main Section -->
-    <main class="container-fluid">
-        <div class="row">
-            <div class="col-12">
-                <h1 id="libraryHeading">My Library (Coming Soon)</h1>
-            </div>
-            <!-- Library Section -->
-                    </div>
-    </main>
-
-
-
 
     <!-- Boostrap -->
     <?php echo '<script'; ?>
@@ -144,5 +124,6 @@ function content_5df19d3b2955a3_26346854 (Smarty_Internal_Template $_smarty_tpl)
         crossorigin="anonymous"><?php echo '</script'; ?>
 >
 </body>
+
 </html><?php }
 }

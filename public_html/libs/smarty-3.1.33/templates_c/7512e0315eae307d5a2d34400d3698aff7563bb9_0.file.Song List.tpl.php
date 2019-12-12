@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-12-12 01:51:57
-  from 'C:\Apache24\htdocs\Webenski_Development\public_html\template\Song List.tpl' */
+/* Smarty version 3.1.33, created on 2019-12-12 13:50:37
+  from '/var/www/public_html/template/Song List.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5df19d3dbff6e2_18711555',
+  'unifunc' => 'content_5df28bfd66d158_13682479',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    'ceef8ee01244be40bacdd5070f4b185ef6ec08ac' => 
+    '7512e0315eae307d5a2d34400d3698aff7563bb9' => 
     array (
-      0 => 'C:\\Apache24\\htdocs\\Webenski_Development\\public_html\\template\\Song List.tpl',
-      1 => 1576115420,
+      0 => '/var/www/public_html/template/Song List.tpl',
+      1 => 1576172948,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5df19d3dbff6e2_18711555 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5df28bfd66d158_13682479 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!doctype html>
 <html lang="en">
 <head>
@@ -60,18 +60,19 @@ function content_5df19d3dbff6e2_18711555 (Smarty_Internal_Template $_smarty_tpl)
                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Discover
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="../artists/artist.php">Artists</a>
-                        <a class="dropdown-item" href="../album/albumList.php">Albums</a>
-                        <a class="dropdown-item" href="../../song/song_list/song_list.html">Songs</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="../../playlist/playlist_list/Playlist list.html">Playlists</a>
+               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="../artists/artist.php">Artists</a>
+                            <a class="dropdown-item" href="../album/albumList.php">Albums</a>
+                            <a class="dropdown-item" href="../song/view_song/Index.php">Songs</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item"
+                            <a class="dropdown-item" href="../playlist/view_playlist/index.php">Playlists</a>
 
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../profile/profile.php">Profile</a>
-                </li>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../profile/profile.php">Profile</a>
+                    </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">

@@ -1,4 +1,27 @@
-<!doctype html>
+<?php
+/* Smarty version 3.1.33, created on 2019-11-14 18:00:25
+  from 'C:\Apache24\htdocs\Webenski\public_html\template\View Song.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.33',
+  'unifunc' => 'content_5dcd96393e3f06_93866493',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '92197daf52cb7bb32d6c556544e76e267ef18f04' => 
+    array (
+      0 => 'C:\\Apache24\\htdocs\\Webenski\\public_html\\template\\View Song.tpl',
+      1 => 1573754319,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_5dcd96393e3f06_93866493 (Smarty_Internal_Template $_smarty_tpl) {
+?><!doctype html>
 <html lang="en">
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -11,7 +34,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href= View%20Song.css>
-    <title>Song View</title>
+    <title>Song View </title>
 </head>
 <body>
 <!-- Nav Bar -->
@@ -36,18 +59,17 @@
                         Discover
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="../artists/artist.php">Artists</a>
-                            <a class="dropdown-item" href="../album/albumList.php">Albums</a>
-                            <a class="dropdown-item" href="../song/view_song/Index.php">Songs</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item"
-                            <a class="dropdown-item" href="../playlist/view_playlist/index.php">Playlists</a>
+                        <a class="dropdown-item" href="../../artists/artist_list/artist_list.html">Artists</a>
+                        <a class="dropdown-item" href="../../album/album_list/album_list.html">Albums</a>
+                        <a class="dropdown-item" href="../../song/song_list/song_list.html">Songs</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="../playlist/index.php">Playlists</a>
 
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../profile/profile.php">Profile</a>
-                    </li>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../../profile/profile.html">Profile</a>
+                </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -60,33 +82,19 @@
 <!-- View Song -->
         <div class="container-fluid">
 
-            <h4>{foreach $Playlist_Name as $PlaylistName =>$playlist}
-                <li>{$playlist}</li> </a>
-                {/foreach}</h4>
-
-            <h6>Added by {foreach $User_Name as $Username => $user}</h6>
-                {/foreach}
-
-            <h5> {foreach $Artist_ID as $aristid => $id}
-                    {$id}
-                {/foreach}</h5>
-
-           <h3>{foreach $Song_Name as $SongName =>$song}
-                    {$song}
-               {/foreach}
-           </h3>
-
-            <img class="WB" src="../../assets/WB Logo.png">
-
-            <p>{foreach $Album_Name as $AlbumName => $album}
-                     {$album}
-            </p>   {/foreach}
-
-
-            <p class="sl">{foreach $Song_Time as $SongTime => $time}
-                {$time}
-            {/foreach} </p>
-
+            <h4><?php echo $_smarty_tpl->tpl_vars['Playlist_Name']->value;?>
+</h4>
+            <h6>Added by <?php echo $_smarty_tpl->tpl_vars['User_Name']->value;?>
+</h6>
+            <h5> <?php echo $_smarty_tpl->tpl_vars['Artist_Name']->value;?>
+</h5>
+           <h3><?php echo $_smarty_tpl->tpl_vars['Song_Name']->value;?>
+</h3> </a>
+            <img class="WB" src="WB%20Logo.png">
+            <p><?php echo $_smarty_tpl->tpl_vars['Album_Name']->value;?>
+</p>
+            <p class="sl"><?php echo $_smarty_tpl->tpl_vars['SongTime']->value;?>
+</p>
             <div class="star">
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star checked"></span>
@@ -99,7 +107,15 @@
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<?php echo '<script'; ?>
+ src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"><?php echo '</script'; ?>
+>
 
+<?php }
+}

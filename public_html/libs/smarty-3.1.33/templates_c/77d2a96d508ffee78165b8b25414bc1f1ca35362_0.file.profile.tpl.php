@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-12-04 03:28:29
+/* Smarty version 3.1.33, created on 2019-12-12 13:23:43
   from '/var/www/public_html/template/profile.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5de76e2de70809_51290477',
+  'unifunc' => 'content_5df285af7fcb95_91927663',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '77d2a96d508ffee78165b8b25414bc1f1ca35362' => 
     array (
       0 => '/var/www/public_html/template/profile.tpl',
-      1 => 1573749283,
+      1 => 1576175010,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5de76e2de70809_51290477 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5df285af7fcb95_91927663 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!-- Profile Page
     *author: Drew Weaver
     *last updated: 9/25/2019
@@ -69,12 +69,13 @@ function content_5de76e2de70809_51290477 (Smarty_Internal_Template $_smarty_tpl)
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Discover
                         </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="../artists/artist.php">Artists</a>
-                            <a class="dropdown-item" href="../album/album_list/album_list.html">Albums</a>
-                            <a class="dropdown-item" href="../song/song_list/song_list.html">Songs</a>
+                            <a class="dropdown-item" href="../album/albumList.php">Albums</a>
+                            <a class="dropdown-item" href="../song/index.php">Songs</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="../playlist/playlist_list/Playlist list.html">Playlists</a>
+                            <a class="dropdown-item"
+                            <a class="dropdown-item" href="../playlist/view_playlist/index.php">Playlists</a>
 
                         </div>
                     </li>

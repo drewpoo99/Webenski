@@ -1,6 +1,6 @@
 <?php
-require_once "../../private_html/dbconfig.inc.php";
-require_once "..//libs/smarty-3.1.33/libs/Smarty.class.php";
+require_once "../../../private_html/dbconfig.inc.php";
+require_once "../../libs/smarty-3.1.33/libs/Smarty.class.php";
 
 $albumID = $_POST['Album_ID'];
 $songName = $_POST['song_name'];
@@ -33,12 +33,12 @@ else{
     echo("array key doesnt exist");
 }
 function addSong($song, $pdo, $albumID){
-    $sql ="UPDATE song SET Album_FK = $albumID WHERE Title = '$song'";
+    $sql ="UPDATE Song SET Album_FK = $albumID WHERE Title = '$song'";
     $stmt = $pdo -> prepare($sql);
     $stmt->execute();
 }
 function delSong($song, $pdo){
-    $sql ="UPDATE song SET Album_FK = '0' WHERE Title = '$song'";
+    $sql ="UPDATE Song SET Album_FK = '0' WHERE Title = '$song'";
     $stmt = $pdo -> prepare($sql);
     $stmt->execute();
 }

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-12-03 14:31:16
+/* Smarty version 3.1.33, created on 2019-12-11 21:09:19
   from '/var/www/public_html/template/login.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5de6b804e64d03_74914388',
+  'unifunc' => 'content_5df1a14f23c1e8_66785287',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e42b6912d40693666e26cc5bbff83b0d31a9d635' => 
     array (
       0 => '/var/www/public_html/template/login.tpl',
-      1 => 1573768051,
+      1 => 1576107870,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5de6b804e64d03_74914388 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5df1a14f23c1e8_66785287 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,11 +48,11 @@ function content_5de6b804e64d03_74914388 (Smarty_Internal_Template $_smarty_tpl)
                 <h1>Sign In To Your Account</h1>
                 <form class="login" action="index.php" method="POST">
                     <div class="form-group row">
-                        <!-- <label for="username" class="col-4 col-form-label">Username</label>  -->
+                        <!-- <label for="email" class="col-4 col-form-label">email</label>  -->
                         <div class="col-6 form-input">
                         <div class="input-group">
-                            <input id="username" name="username" type="text" class="form-control" 
-                            placeholder="Username"
+                            <input id="email" name="email" type="text" class="form-control" 
+                            placeholder="Email"
                             required="required">
                         </div>
                         </div>
@@ -72,6 +72,16 @@ function content_5de6b804e64d03_74914388 (Smarty_Internal_Template $_smarty_tpl)
                             <a class="recovery" href="../passwordManagement/forgotPass.html">Recover Account</a>
                         </div>   
                     </div> 
+                    <?php if ($_smarty_tpl->tpl_vars['status']->value == "1") {?>
+                    <div class="alert alert-warning" role="alert">
+                        Email Does Not Exist
+                    </div>
+                    <?php }?>
+                    <?php if ($_smarty_tpl->tpl_vars['status']->value == "2") {?>
+                    <div class="alert alert-warning" role="alert">
+                        Wrong Email Or Password
+                    </div>
+                    <?php }?>
                     <div class="form-group row">
                         <div class="col-6 form-input">
                         <button name="submit" type="submit" 
@@ -84,7 +94,7 @@ function content_5de6b804e64d03_74914388 (Smarty_Internal_Template $_smarty_tpl)
                 <h1 class="sidebar-heading">New Here?</h1>
                 <h3 class="sidebar-tagline">Enter your details and join us in the new way to enjoy music!</h3>
                 <button name="sign-up" type="Sign-up" class="btn btn-outline-light btn-lg" 
-                id="sUpBtn" onclick="location.href='register.html'">
+                id="sUpBtn" onclick="location.href='login/register.php'">
                     Sign Up
                 </button>
             </div>

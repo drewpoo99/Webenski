@@ -1,17 +1,17 @@
 <?php
-require_once "../private_html/dbconfig.inc.php";
-require_once "../public_html/libs/smarty_php/libs/Smarty.class.php";
+require_once "../../../private_html/dbconfig.inc.php";
+require_once "../../libs/smarty-3.1.33/libs/Smarty.class.php";
 $smarty = new Smarty();
-$smarty->template_dir = "../template";
-$smarty->compile_dir="../public_html/libs/smarty_php/templates_c" ;
+$smarty->template_dir = "../../template";
+$smarty->compile_dir="../../libs/smarty-3.1.33/templates_c" ;
 //if (isset($GET['id'])){
 //    include "View Playlist.php";
 //    exit();
 //}
 $sql = "SELECT Title, length as SongTime, Album_Name as Album, Artist_Name as Artist_FK 
 FROM Song 
-JOIN album on song.Album_FK = album.Album_ID 
-JOIN artist on song.Artist_FK = artist.Artist_ID";
+JOIN Album on Song.Album_FK = Album.Album_OID 
+JOIN Artist on Song.Artist_FK = Artist.Artist_OID";
 $stmt = $pdo->prepare($sql);
 $stmt->execute();
 
@@ -29,7 +29,7 @@ while ($row =$stmt->fetch(PDO::FETCH_ASSOC)) {
     foreach ($row as $column => $value){
         //echo "$value<br>";
         //$SongPlaylist =$value;
-        $PlaylistName [1] = $row{'PlayList_Name'};
+        $PlaylistName [1] = $row['PlayList_Name'];
         $Username[1] = $row['User_Name'];
         $SongNumber[] = $row['Song_OID'];
         $SongName[] = $row['Title'];

@@ -2,9 +2,9 @@
 
 
 //Delete my username, password, and db name if working on your local machine
-define('DB_USER', '');
-define('DB_PASSWORD', '');
-define('DB_NAME', '');
+define('DB_USER', 'csadmin');
+define('DB_PASSWORD', 'spid3r');
+define('DB_NAME', 'musicDB');
 
 $db_name = DB_NAME;
 $username = DB_USER;

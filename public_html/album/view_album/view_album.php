@@ -1,6 +1,6 @@
 <?php
-require_once "../../private_html/dbconfig.inc.php";
-require_once "..//libs/smarty-3.1.33/libs/Smarty.class.php";
+require_once "../../../private_html/dbconfig.inc.php";
+require_once "../../libs/smarty-3.1.33/libs/Smarty.class.php";
 ?>
 <!doctype html>
 <html lang="en">
@@ -14,12 +14,54 @@ require_once "..//libs/smarty-3.1.33/libs/Smarty.class.php";
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-    <link rel="stylesheet" href= View_album.css>
+    <link rel="stylesheet" href= "view_album.css">
     <!-- Next is for use of stars -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>View Album</title>
 </head>
 <body>
+<div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <img src="../assets/WebenskiLogo.png" width="100" height="100" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Discover
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="../../artists/artist.php">Artists</a>
+                            <a class="dropdown-item" href="../../album/albumList.php">Albums</a>
+                            <a class="dropdown-item" href="../../song/view_song/Index.php">Songs</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item"
+                            <a class="dropdown-item" href="../../playlist/view_playlist/index.php">Playlists</a>
+
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../profile/profile.php">Profile</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+    </div>
+
 <div class="container-fluid">
     <h1>
         <img alt="logo" class="logo" src="../../assets/WebenskiLogo.png">
@@ -43,7 +85,7 @@ require_once "..//libs/smarty-3.1.33/libs/Smarty.class.php";
                 <th>Original Album</th>-->
             </tr>
             <?php
-            $sql = "SELECT * From song WHERE Album_FK = '8'";
+            $sql = "SELECT * From Song WHERE Album_FK = '6'";
             $stmt = $pdo -> prepare($sql);
             $stmt->execute();
             $counter = 0;

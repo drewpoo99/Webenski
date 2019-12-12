@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Artists</title>
+    <title>Albums</title>
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -41,10 +41,10 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="../artists/artist.php">Artists</a>
                             <a class="dropdown-item" href="../album/albumList.php">Albums</a>
-                            <a class="dropdown-item" href="../song/index.php">Songs</a>
+                            <a class="dropdown-item" href="../song/view_song/Index.php">Songs</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item"
-                                href="../../playlist/playlist_list/Playlist list.html">Playlists</a>
+                            <a class="dropdown-item" href="../playlist/view_playlist/index.php">Playlists</a>
 
                         </div>
                     </li>
@@ -67,7 +67,8 @@
             {foreach $albumList as $albumKey => $album}    
                 <li class="list-group-item album-img">
                     <img src= {$album.Image}>
-                    <p>{$album.Name}</p>
+                    <p><a href="view_album/view_album.php"> {$album.Name} </a></p>
+		    
                 </li>
             {/foreach}
             </ul>

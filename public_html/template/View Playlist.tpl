@@ -38,16 +38,17 @@
                             Discover
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="../../artists/artist_list/artist_list.html">Artists</a>
-                            <a class="dropdown-item" href="../../album/album_list/album_list.html">Albums</a>
-                            <a class="dropdown-item" href="../../song/song_list/song_list.html">Songs</a>
+                            <a class="dropdown-item" href="../artists/artist.php">Artists</a>
+                            <a class="dropdown-item" href="../album/albumList.php">Albums</a>
+                            <a class="dropdown-item" href="../song/view_song/Index.php">Songs</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="../../playlist/playlist_list/Playlist list.html">Playlists</a>
+                            <a class="dropdown-item"
+                            <a class="dropdown-item" href="../playlist/view_playlist/index.php">Playlists</a>
 
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../../profile/profile.html">Profile</a>
+                        <a class="nav-link" href="../profile/profile.php">Profile</a>
                     </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
@@ -62,7 +63,7 @@
     <div class="container">
         <div class="row">
             <div class="col-3">
-                <img class="WB" src="WB%20Logo.png" height="300px" width="300px" alt="playlist logo">
+                <img class="WB" src="../../assets/WB Logo.png" height="300px" width="300px" alt="playlist logo">
                 <h6 class="songinfo"> {foreach $Songs_In_Playlist as $SongPlaylist =>$nsongs}
                     <li>{$nsongs}</li>{/foreach} of Songs, {foreach $Total_Song_Time as $TotalSongTime => $totaltime}
                     <li>{$totaltime}</li>{/foreach}

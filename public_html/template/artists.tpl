@@ -41,10 +41,10 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="../artists/artist.php">Artists</a>
                             <a class="dropdown-item" href="../album/albumList.php">Albums</a>
-                            <a class="dropdown-item" href="../song/index.php">Songs</a>
+                            <a class="dropdown-item" href="../song/view_song/Index.php">Songs</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item"
-                                href="../../playlist/playlist_list/Playlist list.html">Playlists</a>
+                            <a class="dropdown-item" href="../playlist/view_playlist/index.php">Playlists</a>
 
                         </div>
                     </li>

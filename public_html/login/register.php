@@ -7,7 +7,7 @@
     
     $smarty = new Smarty();
     $smarty->template_dir = "../template";
-    $smarty->compile_dir = "./libs/smarty-3.1.33/templates_c";
+    $smarty->compile_dir = "../libs/smarty-3.1.33/templates_c";
 
     /* Status Codes
     * -1 - Default State
