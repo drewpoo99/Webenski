@@ -1,17 +1,6 @@
 <?php
-define('DB_USER', 'root');
-define('DB_PASSWORD', 'D0ntL0seMessiah');
-define('DB_NAME', 'musicdb');
-$db_name = DB_NAME;
-$username = DB_USER;
-$password = DB_PASSWORD;
-try {    //result: mysql:StudentCourse;host=localhost
-    $dsn = "mysql:dbname=" . DB_NAME . ";" . "host=localhost";
-    $pdo = new PDO($dsn, $username, $password);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
-} catch (PDOException $e) {
-    echo 'ERROR: ' . $e->getMessage();
-}
+require_once "../../private_html/dbconfig.inc.php";
+require_once "..//libs/smarty-3.1.33/libs/Smarty.class.php";
 ?>
 <!doctype html>
 <html lang="en">
@@ -32,11 +21,9 @@ try {    //result: mysql:StudentCourse;host=localhost
 </head>
 <body>
 <div class="container-fluid">
-
     <h1>
         <img alt="logo" class="logo" src="../../assets/WebenskiLogo.png">
     </h1>
-
     <div class="container">
         <div class="row">
             <div class="col-sm-8">
