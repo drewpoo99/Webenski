@@ -49,4 +49,4 @@ function changeRating($ratingNumber, $pdo){
     $stmt->execute();
 }
 echo("Done");
-header('Location: test.php');
+header('Location: view_album.php');
