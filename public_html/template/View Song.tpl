@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href= View%20Song.css>
-    <title>Song View </title>
+    <title>Song View</title>
 </head>
 <body>
 <!-- Nav Bar -->
@@ -36,16 +36,16 @@
                         Discover
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="../artists/artist.php">Artists</a>
-                        <a class="dropdown-item" href="../album/albumList.php">Albums</a>
-                        <a class="dropdown-item" href="../song/index.php">Songs</a>
+                        <a class="dropdown-item" href="../../artists/artist_list/artist_list.html">Artists</a>
+                        <a class="dropdown-item" href="../../album/album_list/album_list.html">Albums</a>
+                        <a class="dropdown-item" href="../../song/song_list/song_list.html">Songs</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="../playlist/index.php">Playlists</a>
+                        <a class="dropdown-item" href="../../playlist/playlist_list/Playlist list.html">Playlists</a>
 
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../profile/profile.php">Profile</a>
+                    <a class="nav-link" href="../../profile/profile.html">Profile</a>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
@@ -59,13 +59,33 @@
 <!-- View Song -->
         <div class="container-fluid">
 
-            <h4>{$Playlist_Name}</h4>
-            <h6>Added by {$User_Name}</h6>
-            <h5> {$Artist_Name}</h5>
-           <h3>{$Song_Name}</h3> </a>
+            <h4>{foreach $Playlist_Name as $PlaylistName =>$playlist}
+                <li>{$playlist}</li> </a>
+                {/foreach}</h4>
+
+            <h6>Added by {foreach $User_Name as $Username => $user}</h6>
+                {/foreach}
+
+            <h5> {foreach $Artist_ID as $aristid => $id}
+                    {$id}
+                {/foreach}</h5>
+
+           <h3>{foreach $Song_Name as $SongName =>$song}
+                    {$song}
+               {/foreach}
+           </h3>
+
             <img class="WB" src="WB%20Logo.png">
-            <p>{$Album_Name}</p>
-            <p class="sl">{$SongTime}</p>
+
+            <p>{foreach $Album_Name as $AlbumName => $album}
+                     {$album}
+            </p>   {/foreach}
+
+
+            <p class="sl">{foreach $Song_Time as $SongTime => $time}
+                {$time}
+            {/foreach} </p>
+
             <div class="star">
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star checked"></span>
