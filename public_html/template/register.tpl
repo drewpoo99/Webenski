@@ -25,19 +25,36 @@
                 <h1>Welcome Back!</h1>
                 <h3>Sign in and hop back into the action!</h3>
                 <button name="sign-up" type="Sign-up" class="btn btn-outline-light btn-lg" 
-                id="sInBtn" onclick="location.href='login.html'">
+                id="sInBtn" onclick="location.href='../index.php'">
                     Sign In
                 </button>
             </div>
             <div class="col-8" id="signup-form">
                 <h1>Sign Up Here!</h1>
-                <form class="signup">
+                <form class="signup" action="register.php" method="POST">
                     <div class="form-group row">
                         <!-- <label for="name" class="col-4 col-form-label">Name</label> -->
                         <div class="col-8 form-input">
                             <div class="input-group">
-                                <input id="name" name="name" type="text" 
-                                class="form-control" placeholder="Name">
+                                <input id="first_name" 
+                                name="first_name" 
+                                type="text" 
+                                class="form-control" 
+                                placeholder="First Name"
+                                required="required">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <!-- <label for="name" class="col-4 col-form-label">Name</label> -->
+                        <div class="col-8 form-input">
+                            <div class="input-group">
+                                <input id="last_name" 
+                                name="last_name" 
+                                type="text" 
+                                class="form-control" 
+                                placeholder="Last Name"
+                                required="required">
                             </div>
                         </div>
                     </div>
@@ -45,8 +62,12 @@
                         <!-- <label for="username" class="col-4 col-form-label">Username</label> -->
                         <div class="col-8 form-input">
                             <div class="input-group">
-                                <input id="username" name="username" type="text" 
-                                class="form-control" placeholder="Username">
+                                <input id="username" 
+                                name="username" 
+                                type="text" 
+                                class="form-control" 
+                                placeholder="Username"
+                                required="required">
                             </div>
                         </div>
                     </div>
@@ -54,8 +75,12 @@
                         <!-- <label for="email" class="col-4 col-form-label">Email</label> -->
                         <div class="col-8 form-input">
                             <div class="input-group">
-                                <input id="email" name="email" type="text" 
-                                class="form-control" placeholder="Email">
+                                <input id="email" 
+                                name="email" 
+                                type="text" 
+                                class="form-control" 
+                                placeholder="Email"
+                                required="required">
                             </div>
                         </div>
                     </div>
@@ -63,16 +88,29 @@
                         <!-- <label for="password" class="col-4 col-form-label">Password</label> -->
                         <div class="col-8 form-input">
                             <div class="input-group">
-                                <input id="password" name="password" type="text" 
-                                class="form-control" placeholder="Password">
+                                <input id="password" 
+                                name="password" 
+                                type="text" 
+                                class="form-control" 
+                                placeholder="Password"
+                                required="required">
                             </div>
                         </div>
                     </div>
+                    {if $status eq "0"}
+                    <div class="alert alert-success" role="alert">
+                        Profile Created! <a href="../index.php"> Log In Here! </a>
+                    </div>
+                    {/if}
+                    {if $status eq "1"}
+                    <div class="alert alert-warning" role="alert">
+                        Email Already Exists, Try Again
+                    </div>
+                    {/if}
                     <div class="form-group row">
                         <div class="col-8 form-input">
                             <button name="submit" type="submit" 
-                            class="btn btn-primary"
-                            onclick="location.href='../profile/profile.html'">Submit</button>
+                            class="btn btn-primary">Submit</button>
                         </div>
                     </div>
                 </form>

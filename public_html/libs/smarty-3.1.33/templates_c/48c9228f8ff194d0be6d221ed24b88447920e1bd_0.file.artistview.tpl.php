@@ -1,11 +1,35 @@
-<!DOCTYPE html>
+<?php
+/* Smarty version 3.1.33, created on 2019-12-10 18:36:53
+  from 'C:\Apache24\htdocs\Webenski_Development\public_html\template\artistview.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.33',
+  'unifunc' => 'content_5defe5c5678093_67248230',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '48c9228f8ff194d0be6d221ed24b88447920e1bd' => 
+    array (
+      0 => 'C:\\Apache24\\htdocs\\Webenski_Development\\public_html\\template\\artistview.tpl',
+      1 => 1573753545,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_5defe5c5678093_67248230 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Artist View - {$artist_name}</title>
+    <title>Artist View - <?php echo $_smarty_tpl->tpl_vars['artist_name']->value;?>
+</title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -44,7 +68,7 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="../artists/artist.php">Artists</a>
-                            <a class="dropdown-item" href="../album/albumList.php">Albums</a>
+                            <a class="dropdown-item" href="../../album/album_list/album_list.html">Albums</a>
                             <a class="dropdown-item" href="../song/index.php">Songs</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="../../playlist/playlist_list/Playlist list.html">Playlists</a>
@@ -71,7 +95,8 @@
                 <img class="artist-image" src="../assets/artists/boston.jpg">
             </div>
             <div class="col-4">
-                <h1 id="artist-name">{$artist_name}</h1>
+                <h1 id="artist-name"><?php echo $_smarty_tpl->tpl_vars['artist_name']->value;?>
+</h1>
                 <div class="rating">
                     <span class="fa fa-star"></span>
                     <span class="fa fa-star"></span>
@@ -94,15 +119,19 @@
             <div class="col-6 albums">
                 <h3>Songs</h3>
                 <div class="list-group">
-                {foreach $artist_songs as $artistSong => $song}
-                {* <p>{$song}</p> *}
-                <a href="#" class="list-group-item list-group-item-action">
+                <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['artist_songs']->value, 'song', false, 'artistSong');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['artistSong']->value => $_smarty_tpl->tpl_vars['song']->value) {
+?>
+                                <a href="#" class="list-group-item list-group-item-action">
                         <div class="row">
                             <div class="col-6">
                                 <img class="album-image" src="../assets/WB Logo.png" alt="">
                             </div>
                             <div class="col-6">
-                                <h4>{$song}</h4>
+                                <h4><?php echo $_smarty_tpl->tpl_vars['song']->value;?>
+</h4>
                                 <small>2017</small>
                                 <div class="rating">
                                     <span class="fa fa-star"></span>
@@ -114,83 +143,31 @@
                             </div>
                         </div>
                     </a>
-                {/foreach}
+                <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                     
-            {* <!-- This section will be the albums, need to do some database work -->
-
-            
-            <div class="col-6 singles">
-                <h3>Singles & EPs</h3>
-                <div class="list-group">
-                    <a href="../../song/view_song/View Song.html" class="list-group-item list-group-item-action">
-                        <div class="row">
-                            <div class="col-6">
-                                <img class="album-image" src="../../assets/album-covers/theMantra.jpg" alt="">
-                            </div>
-                            <div class="col-6">
-                                <h4>The Mantra</h4>
-                                <small>2018</small>
-                                <div class="rating">
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star-half"></span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="../../song/view_song/View Song.html" class="list-group-item list-group-item-action">
-                        <div class="row">
-                            <div class="col-6">
-                                <img class="album-image" src="../../assets/album-covers/kingsDead.jpg" alt="">
-                            </div>
-                            <div class="col-6">
-                                <h4>Kings Dead.</h4>
-                                <small>2018</small>
-                                <div class="rating">
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="../../song/view_song/View Song.html" class="list-group-item list-group-item-action">
-                        <div class="row">
-                            <div class="col-6">
-                                <img class="album-image" src="../../assets/album-covers/allthestars.jpg" alt="">
-                            </div>
-                            <div class="col-6">
-                                <h4>All The Stars (with SZA)</h4>
-                                <small>2015</small>
-                                <div class="rating">
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star-half"></span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="#" class="list-group-item list-group-item-action">
-                        <div class="view-all">
-                            <h3>View All</h3>
-                        </div>
-                    </a>
-                </div>
-            </div> *} 
+             
         </div> 
     </div>
     <!-- Boostrap -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    <?php echo '<script'; ?>
+ src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        crossorigin="anonymous"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        crossorigin="anonymous"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous"><?php echo '</script'; ?>
+>
 </body>
 
-</html>
+</html><?php }
+}

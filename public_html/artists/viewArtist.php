@@ -7,9 +7,9 @@ $smarty = new Smarty();
 $smarty->template_dir ="../template";
 $smarty->compile_dir="../libs/smarty-3.1.33/templates_c";
 
-$sql = "select * from artist 
-        join song on song.Artist_FK = artist.Artist_OID
-        where Artist_OID = 6";
+$sql = "SELECT * FROM Artist 
+        JOIN Song on Song.Artist_FK = Artist.Artist_OID
+        WHERE Artist_OID = 6";
 $stmt = $pdo->prepare($sql);
 $stmt->execute();
 

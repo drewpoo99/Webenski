@@ -36,13 +36,15 @@ h1{
 
   .artist-list{
     margin: 0 auto;
+    text-align: center;
   }
 
-  .album-image img{
-    width: 150px;
-    height: 150px;
+  .artist-list li:hover{
+    background-color: #FF5A09;
+    color: white;
   }
-
-  .list_group_item:hover{
-    background-color: red;
+  .album-img img{
+    width: 250px;
+    height: 250px;
   }
+  

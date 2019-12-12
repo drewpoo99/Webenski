@@ -44,9 +44,9 @@
                         Discover
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Artists</a>
-                        <a class="dropdown-item" href="#">Albums</a>
-                        <a class="dropdown-item" href="#">Songs</a>
+                        <a class="dropdown-item" href="../artists/artist.php">Artists</a>
+                        <a class="dropdown-item" href="../album/albumList.php">Albums</a>
+                        <a class="dropdown-item" href="../song/index.php">Songs</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#">Playlists</a>
 

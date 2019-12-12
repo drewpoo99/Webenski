@@ -1,4 +1,27 @@
-<!-- Profile Settings Page
+<?php
+/* Smarty version 3.1.33, created on 2019-12-11 21:57:14
+  from 'C:\Apache24\htdocs\Webenski_Development\public_html\template\results.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.33',
+  'unifunc' => 'content_5df1663acb4707_80483188',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '459812a00ae70c5f74aa72a4178bc76a02340871' => 
+    array (
+      0 => 'C:\\Apache24\\htdocs\\Webenski_Development\\public_html\\template\\results.tpl',
+      1 => 1573680976,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_5df1663acb4707_80483188 (Smarty_Internal_Template $_smarty_tpl) {
+?><!-- Profile Settings Page
     *author: Drew Weaver
     *last updated: 9/25/2019
 
@@ -22,7 +45,7 @@
     <link rel="stylesheet" href="../globalstyles.css">
 
     <!-- File Specific Styles -->
-    <link rel="stylesheet" href="settings.css">
+    <link rel="stylesheet" href="../profile/settings.css">
 </head>
 
 <body>
@@ -44,9 +67,9 @@
                         Discover
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="../artists/artist.php">Artists</a>
-                        <a class="dropdown-item" href="../album/albumList.php">Albums</a>
-                        <a class="dropdown-item" href="../song/index.php">Songs</a>
+                        <a class="dropdown-item" href="#">Artists</a>
+                        <a class="dropdown-item" href="#">Albums</a>
+                        <a class="dropdown-item" href="#">Songs</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#">Playlists</a>
 
@@ -62,51 +85,50 @@
             </form>
         </div>
     </nav>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="avatar">
-                <img src="../assets/man.png">
-                <a href="../passwordManagement/changePass.html">Change Password</a>
-                <p>*This form will only work if all of the fields are filled in* </p>
+    <div class="container">
+        <div class="col-12">
+            <div class="row results">
+            <h1>Profile Updated!</h1>
+            </div>
+
+            <div class="row">
+            <p>Your new first name: <?php echo $_smarty_tpl->tpl_vars['new_first_name']->value;?>
+</p>
+            </div>
+
+            <div class="row">
+            <p>Your new last name: <?php echo $_smarty_tpl->tpl_vars['new_last_name']->value;?>
+</p>
+            </div>
+
+            <div class="row">
+            <p>Your new email: <?php echo $_smarty_tpl->tpl_vars['new_email']->value;?>
+</p>
+            </div>
+
+            <div class="row">
+            <a href="../profile/profile.php">Return to profile</a>
             </div>
         </div>
-        <form class="settings-form" action="settings.php" method="POST">
-            <div class="form-group row">
-                <div class="col-8">
-                    <label for="first_name">First Name</label>
-                    <input id="first_name" name="first_name" type="text" class="form-control">
-                </div>
-            </div>
-            <div class="form-group row">
-                <div class="col-8">
-                    <label for="last_name">Last Name</label>
-                    <input id="last_name" name="last_name" type="text" class="form-control">
-                </div>
-            </div>
-            <div class="form-group row">
-                <div class="col-8">
-                        <label for="email">Email</label>
-                    <input id="email" name="email" type="text" class="form-control">
-                </div>
-            </div>
-            <div class="form-group row">
-                <div class="offset-3 col-8">
-                    <button name="submit" type="submit" class="btn btn-primary">Submit</button>
-                </div>
-            </div>
-        </form>
     </div>
 
     <!-- Boostrap -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    <?php echo '<script'; ?>
+ src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        crossorigin="anonymous"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        crossorigin="anonymous"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous"><?php echo '</script'; ?>
+>
 </body>
 
-</html>
+</html><?php }
+}

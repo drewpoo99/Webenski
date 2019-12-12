@@ -1,4 +1,27 @@
-<!DOCTYPE html>
+<?php
+/* Smarty version 3.1.33, created on 2019-12-12 01:59:41
+  from 'C:\Apache24\htdocs\Webenski_Development\public_html\template\albums.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.33',
+  'unifunc' => 'content_5df19f0d6f35d9_63713366',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '291ee1f0dc157767a546ea2fd2aba3bec836e419' => 
+    array (
+      0 => 'C:\\Apache24\\htdocs\\Webenski_Development\\public_html\\template\\albums.tpl',
+      1 => 1576115909,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_5df19f0d6f35d9_63713366 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -21,7 +44,7 @@
     <div class="container-fluid">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="#">
-                <img src="../../assets/WebenskiLogo.png" width="100" height="100" alt="">
+                <img src="../assets/WebenskiLogo.png" width="100" height="100" alt="">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -61,31 +84,45 @@
     </div>
 
     <div class="container-fluid">
-    <h1>Artists Library</h1>
+    <h1>Album Library</h1>
         <div class="col-4 artist-list">
             <ul class="list-group">
-            {foreach $artistList as $artistName}    
-                <li class="list-group-item">{$artistName}</li>
-            {/foreach}
+            <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['albumList']->value, 'album', false, 'albumKey');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['albumKey']->value => $_smarty_tpl->tpl_vars['album']->value) {
+?>    
+                <li class="list-group-item album-img">
+                    <img src= <?php echo $_smarty_tpl->tpl_vars['album']->value['Image'];?>
+>
+                    <p><?php echo $_smarty_tpl->tpl_vars['album']->value['Name'];?>
+</p>
+                </li>
+            <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
             </ul>
         </div>
     </div>
-    
-   
-        
-        <a href="viewArtist.php">View Single Artist</a>
-
 
     <!-- Boostrap -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    <?php echo '<script'; ?>
+ src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        crossorigin="anonymous"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        crossorigin="anonymous"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous"><?php echo '</script'; ?>
+>
 </body>
 
-</html>
+</html><?php }
+}

@@ -1,4 +1,27 @@
-<!DOCTYPE html>
+<?php
+/* Smarty version 3.1.33, created on 2019-12-03 14:31:16
+  from '/var/www/public_html/template/login.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.33',
+  'unifunc' => 'content_5de6b804e64d03_74914388',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'e42b6912d40693666e26cc5bbff83b0d31a9d635' => 
+    array (
+      0 => '/var/www/public_html/template/login.tpl',
+      1 => 1573768051,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_5de6b804e64d03_74914388 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -15,7 +38,7 @@
     <link rel="stylesheet" href="../globalstyles.css">
 
     <!-- Login Styles -->
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="./login/login.css">
     
 </head>
 <body>
@@ -23,7 +46,7 @@
         <div class="row">
             <div class="col-8" id="login-form">
                 <h1>Sign In To Your Account</h1>
-                <form class="login">
+                <form class="login" action="index.php" method="POST">
                     <div class="form-group row">
                         <!-- <label for="username" class="col-4 col-form-label">Username</label>  -->
                         <div class="col-6 form-input">
@@ -52,8 +75,7 @@
                     <div class="form-group row">
                         <div class="col-6 form-input">
                         <button name="submit" type="submit" 
-                        class="btn btn-primary" 
-                        onclick="location.href='../profile/profile.html'">Submit</button>
+                        class="btn btn-primary">Submit</button>
                         </div>
                     </div>
                 </form> 
@@ -73,14 +95,21 @@
 
 
     <!-- Boostrap -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
+    <?php echo '<script'; ?>
+ src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" 
-    crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" 
+    crossorigin="anonymous"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" 
     integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" 
-    crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
+    crossorigin="anonymous"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" 
-    crossorigin="anonymous"></script>
+    crossorigin="anonymous"><?php echo '</script'; ?>
+>
 </body>
-</html>
+</html><?php }
+}

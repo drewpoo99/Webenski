@@ -36,16 +36,16 @@
                         Discover
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="../../artists/artist_list/artist_list.html">Artists</a>
-                        <a class="dropdown-item" href="../../album/album_list/album_list.html">Albums</a>
-                        <a class="dropdown-item" href="../../song/song_list/song_list.html">Songs</a>
+                        <a class="dropdown-item" href="../artists/artist.php">Artists</a>
+                        <a class="dropdown-item" href="../album/albumList.php">Albums</a>
+                        <a class="dropdown-item" href="../song/index.php">Songs</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="../playlist/index.php">Playlists</a>
 
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../../profile/profile.html">Profile</a>
+                    <a class="nav-link" href="../profile/profile.php">Profile</a>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">

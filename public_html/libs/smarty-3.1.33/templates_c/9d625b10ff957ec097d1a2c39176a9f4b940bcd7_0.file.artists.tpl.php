@@ -1,4 +1,27 @@
-<!DOCTYPE html>
+<?php
+/* Smarty version 3.1.33, created on 2019-12-09 12:03:47
+  from '/var/www/public_html/template/artists.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.33',
+  'unifunc' => 'content_5dee7e73273778_94343089',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '9d625b10ff957ec097d1a2c39176a9f4b940bcd7' => 
+    array (
+      0 => '/var/www/public_html/template/artists.tpl',
+      1 => 1573750550,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_5dee7e73273778_94343089 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -12,7 +35,7 @@
 
     <!-- Bootstrap Overriding Styles -->
     <link rel="stylesheet" href="../../globalstyles.css">
-    <link rel="stylesheet" href="../artists/artist_list.css">
+    <link rel="stylesheet" href="../artists/artist_list/artist_list.css">
 
 </head>
 
@@ -40,8 +63,8 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="../artists/artist.php">Artists</a>
-                            <a class="dropdown-item" href="../album/albumList.php">Albums</a>
-                            <a class="dropdown-item" href="../song/index.php">Songs</a>
+                            <a class="dropdown-item" href="../album/">Albums</a>
+                            <a class="dropdown-item" href="../../song/song_list/song_list.html">Songs</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item"
                                 href="../../playlist/playlist_list/Playlist list.html">Playlists</a>
@@ -60,32 +83,42 @@
         </nav>
     </div>
 
-    <div class="container-fluid">
     <h1>Artists Library</h1>
-        <div class="col-4 artist-list">
-            <ul class="list-group">
-            {foreach $artistList as $artistName}    
-                <li class="list-group-item">{$artistName}</li>
-            {/foreach}
-            </ul>
-        </div>
-    </div>
-    
-   
-        
+    <!-- Artist List -->
+            <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['artistList']->value, 'artist', false, 'artistName');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['artistName']->value => $_smarty_tpl->tpl_vars['artist']->value) {
+?>
+            <h3> Name: <?php echo $_smarty_tpl->tpl_vars['artist']->value;?>
+</h3>
+        <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
         <a href="viewArtist.php">View Single Artist</a>
+        
+
+                                        
 
 
-    <!-- Boostrap -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        <!-- Boostrap -->
+    <?php echo '<script'; ?>
+ src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        crossorigin="anonymous"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        crossorigin="anonymous"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous"><?php echo '</script'; ?>
+>
 </body>
 
-</html>
+</html><?php }
+}

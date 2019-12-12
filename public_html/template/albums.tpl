@@ -21,7 +21,7 @@
     <div class="container-fluid">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="#">
-                <img src="../../assets/WebenskiLogo.png" width="100" height="100" alt="">
+                <img src="../assets/WebenskiLogo.png" width="100" height="100" alt="">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -61,20 +61,18 @@
     </div>
 
     <div class="container-fluid">
-    <h1>Artists Library</h1>
+    <h1>Album Library</h1>
         <div class="col-4 artist-list">
             <ul class="list-group">
-            {foreach $artistList as $artistName}    
-                <li class="list-group-item">{$artistName}</li>
+            {foreach $albumList as $albumKey => $album}    
+                <li class="list-group-item album-img">
+                    <img src= {$album.Image}>
+                    <p>{$album.Name}</p>
+                </li>
             {/foreach}
             </ul>
         </div>
     </div>
-    
-   
-        
-        <a href="viewArtist.php">View Single Artist</a>
-
 
     <!-- Boostrap -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"

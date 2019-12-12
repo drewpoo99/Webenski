@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-11-14 17:40:23
-  from 'C:\Apache24\htdocs\Webenski\public_html\template\Song List.tpl' */
+/* Smarty version 3.1.33, created on 2019-12-12 01:51:57
+  from 'C:\Apache24\htdocs\Webenski_Development\public_html\template\Song List.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5dcd918716a4d9_01098851',
+  'unifunc' => 'content_5df19d3dbff6e2_18711555',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '8997feff10118967828af4eab7fc64578f66c374' => 
+    'ceef8ee01244be40bacdd5070f4b185ef6ec08ac' => 
     array (
-      0 => 'C:\\Apache24\\htdocs\\Webenski\\public_html\\template\\Song List.tpl',
-      1 => 1573753221,
+      0 => 'C:\\Apache24\\htdocs\\Webenski_Development\\public_html\\template\\Song List.tpl',
+      1 => 1576115420,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5dcd918716a4d9_01098851 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5df19d3dbff6e2_18711555 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!doctype html>
 <html lang="en">
 <head>
@@ -61,8 +61,8 @@ function content_5dcd918716a4d9_01098851 (Smarty_Internal_Template $_smarty_tpl)
                         Discover
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="../../artists/artist_list/artist_list.html">Artists</a>
-                        <a class="dropdown-item" href="../../album/album_list/album_list.html">Albums</a>
+                        <a class="dropdown-item" href="../artists/artist.php">Artists</a>
+                        <a class="dropdown-item" href="../album/albumList.php">Albums</a>
                         <a class="dropdown-item" href="../../song/song_list/song_list.html">Songs</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="../../playlist/playlist_list/Playlist list.html">Playlists</a>
@@ -70,7 +70,7 @@ function content_5dcd918716a4d9_01098851 (Smarty_Internal_Template $_smarty_tpl)
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../../profile/profile.html">Profile</a>
+                    <a class="nav-link" href="../profile/profile.php">Profile</a>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">

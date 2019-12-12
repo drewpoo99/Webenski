@@ -7,7 +7,7 @@ $smarty = new Smarty();
 $smarty->template_dir ="../template";
 $smarty->compile_dir="../libs/smarty-3.1.33/templates_c";
 
-$sql = "SELECT * from artist order by artist_name";
+$sql = "SELECT * FROM Artist ORDER BY Artist_Name";
 $stmt = $pdo->prepare($sql);
 $stmt->execute();
 

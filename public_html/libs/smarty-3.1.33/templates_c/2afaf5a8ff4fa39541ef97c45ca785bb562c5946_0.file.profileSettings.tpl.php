@@ -1,4 +1,27 @@
-<!-- Profile Settings Page
+<?php
+/* Smarty version 3.1.33, created on 2019-12-12 01:50:58
+  from 'C:\Apache24\htdocs\Webenski_Development\public_html\template\profileSettings.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.33',
+  'unifunc' => 'content_5df19d026da244_26798853',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '2afaf5a8ff4fa39541ef97c45ca785bb562c5946' => 
+    array (
+      0 => 'C:\\Apache24\\htdocs\\Webenski_Development\\public_html\\template\\profileSettings.tpl',
+      1 => 1576115371,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_5df19d026da244_26798853 (Smarty_Internal_Template $_smarty_tpl) {
+?><!-- Profile Settings Page
     *author: Drew Weaver
     *last updated: 9/25/2019
 
@@ -46,7 +69,7 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="../artists/artist.php">Artists</a>
                         <a class="dropdown-item" href="../album/albumList.php">Albums</a>
-                        <a class="dropdown-item" href="../song/index.php">Songs</a>
+                        <a class="dropdown-item" href="#">Songs</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#">Playlists</a>
 
@@ -98,15 +121,22 @@
     </div>
 
     <!-- Boostrap -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    <?php echo '<script'; ?>
+ src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        crossorigin="anonymous"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        crossorigin="anonymous"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous"><?php echo '</script'; ?>
+>
 </body>
 
-</html>
+</html><?php }
+}
