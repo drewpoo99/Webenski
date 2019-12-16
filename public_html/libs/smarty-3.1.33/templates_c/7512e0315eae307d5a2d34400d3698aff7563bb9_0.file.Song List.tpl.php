@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-12-12 13:50:37
+/* Smarty version 3.1.33, created on 2019-12-16 14:57:58
   from '/var/www/public_html/template/Song List.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5df28bfd66d158_13682479',
+  'unifunc' => 'content_5df7e1c6a93792_89821409',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '7512e0315eae307d5a2d34400d3698aff7563bb9' => 
     array (
       0 => '/var/www/public_html/template/Song List.tpl',
-      1 => 1576172948,
+      1 => 1576526276,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5df28bfd66d158_13682479 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5df7e1c6a93792_89821409 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!doctype html>
 <html lang="en">
 <head>
@@ -121,7 +121,7 @@ $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->t
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['SongName']->value => $_smarty_tpl->tpl_vars['value']->value) {
 ?>
-                <a href="songView.php">
+                <a href="./view_song/Index.php">
                     <li><?php echo $_smarty_tpl->tpl_vars['value']->value;?>
 </li> </a>
                 <?php

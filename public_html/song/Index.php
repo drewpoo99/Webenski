@@ -9,7 +9,7 @@ $smarty->compile_dir="../libs/smarty-3.1.33/templates_c" ;
 
 $sql ="SELECT Song_OID, Title, length as SongTime, Album_Name as Album, Artist_FK
      FROM Song
-    JOIN album on song.Album_FK = album.Album_OID
+    JOIN Album on Song.Album_FK = Album.Album_OID
      ORDER BY song_OID";
 $stmt = $pdo->prepare($sql);
 $stmt->execute();

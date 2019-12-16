@@ -86,7 +86,7 @@
             <h6>Title</h6>
             <ul class="song">
                 {foreach $Song_Name as $SongName => $value}
-                <a href="songView.php">
+                <a href="./view_song/Index.php">
                     <li>{$value}</li> </a>
                 {/foreach}
 
