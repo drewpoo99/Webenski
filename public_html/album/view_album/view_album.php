@@ -1,6 +1,8 @@
 <?php
 require_once "../../../private_html/dbconfig.inc.php";
 require_once "../../libs/smarty-3.1.33/libs/Smarty.class.php";
+//Gets the album from the prior page
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -85,17 +87,19 @@ require_once "../../libs/smarty-3.1.33/libs/Smarty.class.php";
                 <th>Original Album</th>-->
             </tr>
             <?php
-            $sql = "SELECT * From Song WHERE Album_FK = '6'";
+            $albumID =  $_SESSION['albumID'];
+            $sql = "SELECT * From Song WHERE Album_FK = '8'";
             $stmt = $pdo -> prepare($sql);
             $stmt->execute();
             $counter = 0;
             if($stmt->rowCount() > 0){
+                echo $albumID;
                 while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
                     $counter++;
                     echo"<tr><td>".$counter."</td><td>".$row["Title"]."</td></tr>";
                 }
             }else{
-                echo"Uh oh not again";
+                echo"No Songs To Display!";
             }
             ?>
             <tr>
