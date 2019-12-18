@@ -1,11 +1,24 @@
 <?php
-require_once "../../../private_html/dbconfig.inc.php";
-require_once "../../libs/smarty-3.1.33/libs/Smarty.class.php";
+define('DB_USER', 'root');
+define('DB_PASSWORD', 'D0ntL0seMessiah');
+define('DB_NAME', 'musicDB');
+
+$db_name = DB_NAME;
+$username = DB_USER;
+$password = DB_PASSWORD;
+
+
+try {    //result: mysql:StudentCourse;host=localhost
+    $dsn = "mysql:dbname=" . DB_NAME . ";" . "host=localhost";
+    $pdo = new PDO($dsn, $username, $password);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
+} catch (PDOException $e) {
+    echo 'ERROR: ' . $e->getMessage();
+}
 
 $albumID = $_POST['Album_ID'];
 $songName = $_POST['song_name'];
 $ratingNumber = 0;
-echo $songName;
 
 if(array_key_exists('add_song', $_POST)){
     addSong($songName, $pdo, $albumID);
@@ -33,12 +46,12 @@ else{
     echo("array key doesnt exist");
 }
 function addSong($song, $pdo, $albumID){
-    $sql ="UPDATE Song SET Album_FK = $albumID WHERE Title = '$song'";
+    $sql ="UPDATE song SET Album_FK = $albumID WHERE Title = '$song'";
     $stmt = $pdo -> prepare($sql);
     $stmt->execute();
 }
 function delSong($song, $pdo){
-    $sql ="UPDATE Song SET Album_FK = '0' WHERE Title = '$song'";
+    $sql ="UPDATE song SET Album_FK = '0' WHERE Title = '$song'";
     $stmt = $pdo -> prepare($sql);
     $stmt->execute();
 }
